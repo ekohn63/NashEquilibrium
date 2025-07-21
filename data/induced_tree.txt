@@ -1,0 +1,2313 @@
+0(0, 0)|---Pitcher
+     .1(0, 0)|---Batter
+     .     .2(0, 0)|---Nature
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(1, 0)|---Pitcher
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .3(0, 1)|---Terminal, Strikeout
+     .     .2(0, 0)|---Nature
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(1, 0)|---Pitcher
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .3(0, 1)|---Terminal, Strikeout
+     .1(0, 0)|---Batter
+     .     .2(0, 0)|---Nature
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(1, 0)|---Pitcher
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .3(0, 1)|---Terminal, Strikeout
+     .     .2(0, 0)|---Nature
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(1, 0)|---Pitcher
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .3(0, 1)|---Terminal, Strikeout
+     .1(0, 0)|---Batter
+     .     .2(0, 0)|---Nature
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(1, 0)|---Pitcher
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .3(0, 1)|---Terminal, Strikeout
+     .     .2(0, 0)|---Nature
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(1, 0)|---Pitcher
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .3(0, 1)|---Terminal, Strikeout
+     .1(0, 0)|---Batter
+     .     .2(0, 0)|---Nature
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(1, 0)|---Pitcher
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .3(0, 1)|---Terminal, Strikeout
+     .     .2(0, 0)|---Nature
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(1, 0)|---Pitcher
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .3(0, 1)|---Terminal, Strikeout
+     .1(0, 0)|---Batter
+     .     .2(0, 0)|---Nature
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(1, 0)|---Pitcher
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .3(0, 1)|---Terminal, Strikeout
+     .     .2(0, 0)|---Nature
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(1, 0)|---Pitcher
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .3(0, 1)|---Terminal, Strikeout
+     .1(0, 0)|---Batter
+     .     .2(0, 0)|---Nature
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(1, 0)|---Pitcher
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .3(0, 1)|---Terminal, Strikeout
+     .     .2(0, 0)|---Nature
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(1, 0)|---Pitcher
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .3(0, 1)|---Terminal, Strikeout
+     .1(0, 0)|---Batter
+     .     .2(0, 0)|---Nature
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(1, 0)|---Pitcher
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .3(0, 1)|---Terminal, Strikeout
+     .     .2(0, 0)|---Nature
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(1, 0)|---Pitcher
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .3(0, 1)|---Terminal, Strikeout
+     .1(0, 0)|---Batter
+     .     .2(0, 0)|---Nature
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(1, 0)|---Pitcher
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .3(0, 1)|---Terminal, Strikeout
+     .     .2(0, 0)|---Nature
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(0, 0)|---Terminal
+     .     .     .3(1, 0)|---Pitcher
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .4(1, 0)|---Batter
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5(1, 0)|---Nature
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(0, 0)|---Terminal
+     .     .     .     .     .     .6(2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6(1, 1)|---Terminal, Strikeout
+     .     .     .3(0, 1)|---Terminal, Strikeout

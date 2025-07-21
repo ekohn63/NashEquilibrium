@@ -1,0 +1,99 @@
+0 info_set: 1 (0, 0)|---Pitcher
+     .1 info_set: 1 (0, 0)|---Batter
+     .     .2 info_set: 1 (0, 0)|---Nature
+     .     .     .3 info_set: 2 (0, 0)|---Pitcher
+     .     .     .     .4 info_set: 1 (0, 0)|---Batter
+     .     .     .     .     .5 info_set: 1 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .     .     .5 info_set: 1 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .     .4 info_set: 1 (0, 0)|---Batter
+     .     .     .     .     .5 info_set: 2 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .     .     .5 info_set: 2 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .3 info_set: 3 (0, 0)|---Pitcher
+     .     .     .     .4 info_set: 2 (0, 0)|---Batter
+     .     .     .     .     .5 info_set: 1 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .     .     .5 info_set: 1 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .     .4 info_set: 2 (0, 0)|---Batter
+     .     .     .     .     .5 info_set: 2 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .     .     .5 info_set: 2 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .3 info_set: None (0, 0)|---Terminal
+     .     .2 info_set: 1 (0, 0)|---Nature
+     .     .     .3 info_set: 4 (0, 0)|---Pitcher
+     .     .     .     .4 info_set: 3 (0, 0)|---Batter
+     .     .     .     .     .5 info_set: 1 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .     .     .5 info_set: 1 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .     .4 info_set: 3 (0, 0)|---Batter
+     .     .     .     .     .5 info_set: 2 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .     .     .5 info_set: 2 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .3 info_set: 5 (0, 0)|---Pitcher
+     .     .     .     .4 info_set: 4 (0, 0)|---Batter
+     .     .     .     .     .5 info_set: 1 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .     .     .5 info_set: 1 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .     .4 info_set: 4 (0, 0)|---Batter
+     .     .     .     .     .5 info_set: 2 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .     .     .5 info_set: 2 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .3 info_set: None (0, 0)|---Terminal
+     .1 info_set: 1 (0, 0)|---Batter
+     .     .2 info_set: 1 (0, 0)|---Nature
+     .     .     .3 info_set: 6 (0, 0)|---Pitcher
+     .     .     .     .4 info_set: 5 (0, 0)|---Batter
+     .     .     .     .     .5 info_set: 1 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .     .     .5 info_set: 1 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .     .4 info_set: 5 (0, 0)|---Batter
+     .     .     .     .     .5 info_set: 2 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .     .     .5 info_set: 2 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .3 info_set: 7 (0, 0)|---Pitcher
+     .     .     .     .4 info_set: 6 (0, 0)|---Batter
+     .     .     .     .     .5 info_set: 1 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .     .     .5 info_set: 1 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .     .4 info_set: 6 (0, 0)|---Batter
+     .     .     .     .     .5 info_set: 2 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .     .     .5 info_set: 2 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .3 info_set: None (0, 0)|---Terminal
+     .     .2 info_set: 1 (0, 0)|---Nature
+     .     .     .3 info_set: 8 (0, 0)|---Pitcher
+     .     .     .     .4 info_set: 7 (0, 0)|---Batter
+     .     .     .     .     .5 info_set: 1 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .     .     .5 info_set: 1 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .     .4 info_set: 7 (0, 0)|---Batter
+     .     .     .     .     .5 info_set: 2 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .     .     .5 info_set: 2 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .3 info_set: 9 (0, 0)|---Pitcher
+     .     .     .     .4 info_set: 8 (0, 0)|---Batter
+     .     .     .     .     .5 info_set: 1 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .     .     .5 info_set: 1 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .     .4 info_set: 8 (0, 0)|---Batter
+     .     .     .     .     .5 info_set: 2 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .     .     .5 info_set: 2 (0, 0)|---Nature
+     .     .     .     .     .     .6 info_set: None (0, 0)|---Terminal
+     .     .     .3 info_set: None (0, 0)|---Terminal
