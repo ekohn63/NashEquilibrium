@@ -18,6 +18,7 @@ GREEN = "\033[32m"
 YELLOW = "\033[33m"
 CYAN = "\033[36m"
 
+
 def outcome_prob(pitcher_act: tuple, batter_act: BatterAction) -> Dict[str, float]: 
     if batter_act == BatterAction.Swing: 
         b_key = "Swing"

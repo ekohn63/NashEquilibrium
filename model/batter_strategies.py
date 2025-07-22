@@ -1,22 +1,18 @@
 from .action_set import BATTER_ACTIONS
-from .helpers import idx_to_strat
+from .helpers import idx_to_strat, strat_to_idx
 from itertools import product
+from model.induced_tree import STRIKEOUT, WALK
 
-B_BASE = 2
-B_LEN = 6
-B_TOTAL = B_BASE ** B_LEN
+B_BASE = len(BATTER_ACTIONS)
+B_INFOSETS= STRIKEOUT + WALK - 1 
+B_TOTAL = B_BASE ** B_INFOSETS
 
 batter_strat = []
 for i in range(B_TOTAL): 
-    strat = idx_to_strat(i, B_BASE, B_LEN, BATTER_ACTIONS)
-    #batter_strat.append(tuple(reversed(strat)))
+    strat = idx_to_strat(i, B_BASE, B_INFOSETS, BATTER_ACTIONS)
     batter_strat.append(strat)
 
-
 if __name__ == "__main__": 
-    #print(BATTER_ACTIONS)
-    #print(BATTER_ACTIONS[0], BATTER_ACTIONS[1])
-    #print(idx_to_strat(, B_BASE, B_LEN, BATTER_ACTIONS))
-    #print(idx_to_strat(5, B_BASE, B_LEN, BATTER_ACTIONS))
-    for i in range(10):
-        print(batter_strat[i], "\n")
+    print(batter_strat[0])
+    strat = batter_strat[2]
+    strat_to_idx(strat, B_BASE, BATTER_ACTIONS)

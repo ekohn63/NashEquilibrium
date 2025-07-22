@@ -1,8 +1,7 @@
 import pickle
-from si_star import Si_star
+from .si_star import Si_star
 from tree.linprog import row_max_min
 from model.helpers import strat_to_idx
-import data.pitcher_optimal
 
 def list_strategies(target, player_id, root):
     si =  Si_star(target, player_id, root)
@@ -12,15 +11,17 @@ def list_strategies(target, player_id, root):
     return list_strats
 
 def load_mixed_strat():
-    with open("C:\Users\elidk\PycharmProjects\NashEquilibirum\data\pitcher_optimal.pkl", 'rb') as file:
+    with open("C:\\Users\\elidk\\PycharmProjects\\NashEquilibirum\\data\\pitcher_optimal.pkl", 'rb') as file:
         pitcher_strat = pickle.load(file)
 
-    with open("C:\Users\elidk\PycharmProjects\NashEquilibirum\data\batter_optimal.pkl", 'rb') as file:
+    with open("C:\\Users\\elidk\\PycharmProjects\\NashEquilibirum\\data\\batter_optimal.pkl", 'rb') as file:
         batter_strat = pickle.load(file)
+    
+    print(f"ps: {pitcher_strat}, bs: {batter_strat}")
     
     return pitcher_strat, batter_strat
 
-def sum_of_strat(player_id):
+def sum_of_strat(root, target, player_id):
     pitcher_strat, batter_strat = load_mixed_strat()
     list_strats = list_strategies(target, player_id, root)
     if player_id == "Pitcher":
@@ -33,3 +34,6 @@ def sum_of_strat(player_id):
         prob += mixed_strat[idx]
 
     return prob
+
+if __name__ == "__main__":
+    load_mixed_strat()

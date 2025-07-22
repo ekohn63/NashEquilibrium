@@ -6,8 +6,8 @@ from .action_set import PITCHER_ACTIONS, BATTER_ACTIONS, NATURE_ACTIONS, Nature
 import csv
 import sys
 
-RED = "\033[91m"
-END = "\033[0m"
+STRIKEOUT = 2
+WALK = 3
 
 # Note to self - make sure to review self, and what the python module, and PYTHONPATH business is
 class Node:
@@ -68,9 +68,9 @@ def is_terminal_node(node:Node):
 
     if decision in [Nature.Single, Nature.Double, Nature.Triple, Nature.HR, Nature.Out]:
         return True
-    elif decision == Nature.Ball and node.count[0] >= 3: # this was the issue, count doesn't go up after this, so need to check at >=3, not >=2!
+    elif decision == Nature.Ball and node.count[0] >= WALK: # this was the issue, count doesn't go up after this, so need to check at >=3, not >=2!
         return True
-    elif decision == Nature.Strike and node.count[1] >= 2: #similar problem at this line!
+    elif decision == Nature.Strike and node.count[1] >= STRIKEOUT: #similar problem at this line!
         return True
     else:
         return False
@@ -97,13 +97,13 @@ def build_tree(node: Node):
             if act in {Nature.Single, Nature.Double, Nature.Triple, Nature.HR, Nature.Out}:
                 node.add_child(act, child = Node(data = "Terminal", count = (0,0)))
             elif act == Nature.Strike: 
-                if count[1]+1 >= 3:
+                if count[1]+1 >= STRIKEOUT:
                     label = "Terminal, Strikeout"
                 else:
                     label = next_player(node.data)
                 node.add_child(Nature.Strike, child = Node(data = label, count = (count[0], count[1]+1))) # this should be terminal if the count is a terminal count
             else:
-                if count[0]+1 >= 4:
+                if count[0]+1 >= WALK:
                     label = "Terminal, Walk"
                 else:
                     label = next_player(node.data)

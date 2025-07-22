@@ -4,9 +4,10 @@ from .action_set import PITCHER_ACTIONS
 from .helpers import idx_to_strat
 from itertools import islice
 import csv
+from model.induced_tree import STRIKEOUT, WALK
 
 P_BASE   = 8          # alphabet size
-P_LEN    = 6         # walk at 3 balls, strikeout at 2 strikes!
+P_LEN    = STRIKEOUT + WALK -1         # walk at 3 balls, strikeout at 2 strikes!
 P_TOTAL  = P_BASE ** P_LEN   # 8^12  (68_719_476_736)
 
 def pitcher_strategy(idx: int):

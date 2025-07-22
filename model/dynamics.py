@@ -4,6 +4,7 @@ from dataclasses import replace
 from .action_set import Nature, BatterAction
 from .state import State
 from .payoff import terminal_utility
+from model.induced_tree import STRIKEOUT, WALK
 
 class Outcome: 
     Single = auto()
@@ -44,13 +45,13 @@ def state_dynamics(s: State, event:Nature) -> Tuple[State, int]:
             return replace(s, on_first = first, on_second= second, on_third = third, outs = o), runs
         
     if event == Nature.Ball: 
-        if s.balls >=3:
+        if s.balls >=(WALK-1):
             first, second, third, o, runs = advance_runner(s, Outcome.Walk)
             return replace(s, strikes = 0, balls = 0, on_first = first, on_second = second, on_third = third, outs = 0), runs
         else: 
             return replace(s, balls= s.balls + 1), 0
     elif event ==  Nature.Strike: 
-        if s.strikes >= 2:
+        if s.strikes >= (STRIKEOUT-1):
             first, second, third, o, runs = advance_runner(s, Outcome.Strikeout)
             #print(o)
             return replace(s, strikes = 0, balls = 0, on_first = first, on_second = second, on_third = third, outs = o), runs

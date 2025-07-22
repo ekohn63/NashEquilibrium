@@ -27,8 +27,8 @@ def row_max_min(U):
     p = res_row.x[:n]
     v = -res_row.fun                            # remember: we minimized -v
 
-    file_path = "C:\\Users\\elidk\\PycharmProjects\\NashEquilibirum\\data\\pitcher_optimal.pkl"
-    with open(file_path, mode = 'w') as file:
+    file_path = "C:\\Users\\elidk\\PycharmProjects\\NashEquilibirum\\data\\batter_optimal.pkl"
+    with open(file_path, mode = 'wb') as file:
         pickle.dump(p, file)
 
     return (p, v)
@@ -61,6 +61,11 @@ def col_min_max(U):
 
     q = col_res.x[:m]
     w = col_res.fun
+
+    file_path = "C:\\Users\\elidk\\PycharmProjects\\NashEquilibirum\\data\\pitcher_optimal.pkl"
+    with open(file = file_path, mode = 'wb') as f:
+        pickle.dump(q, f)
+
     return (q, w)
 
 #this is assuming pure strategy nash equilibirum!

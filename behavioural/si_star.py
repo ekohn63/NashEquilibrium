@@ -70,8 +70,6 @@ def player_info_sets(root: Node, player_id)-> dict[Hashable,Node]:
 # step one - path of 
 def Si_star(target: Node, player_id, root: Node,): 
     path = path_to_node(root, target)
-
-
     # get info-sets on the path, and the corresponding action!
     # importantly, the last node on the path doesn't have an info set!
     # Note: this sets such that every vertex in info_set, U_i takes the same action
