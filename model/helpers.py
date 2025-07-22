@@ -19,7 +19,6 @@ def strat_to_idx(strategy: dict[Hashable, Node], base, action_set):
     length = 0
     idx = 0
     for info_set, action_at_infoset in strategy.items():
-        print(f"act_info: {action_at_infoset}")
         idx += action_at_infoset.value * (base**(info_set - 1))
         length += 1
     return idx

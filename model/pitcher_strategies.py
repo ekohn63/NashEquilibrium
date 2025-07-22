@@ -7,8 +7,9 @@ import csv
 from model.induced_tree import STRIKEOUT, WALK
 
 P_BASE   = len(PITCHER_ACTIONS)          # alphabet size
-P_LEN    = STRIKEOUT + WALK -1         # walk at 3 balls, strikeout at 2 strikes!
+P_LEN    = STRIKEOUT + WALK - 1         # walk at 3 balls, strikeout at 2 strikes!
 P_TOTAL  = P_BASE ** P_LEN   # 8^12  (68_719_476_736)
+
 
 def pitcher_strategy(idx: int):
     if not 0 <= idx < P_TOTAL:

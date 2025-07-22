@@ -86,7 +86,7 @@ def Si_star(target: Node, player_id, root: Node,):
     
     print(f"\033[91m len_req \033[0m = {len(required_strat)} \033, \033[91m len_free \033[0m = {len(free_info_set)}")
 
-    print(f"free_info_set: {free_info_set}")
+    #print(f"free_info_set: {free_info_set}")
     # get a list of the list of the actions available at the node in each info set
 
     action_lists = []
@@ -109,9 +109,9 @@ def get_required_strat(root:Node, target:Node, player_id):
     path = path_to_node(root, target)
     for node, nxt in zip(path[:-1], path[1:]): 
         if node.data == player_id:
-            for child in node.children.values():
+            for action, child in node.children.items():
                 if child == nxt:
-                    required_strat[node.info_set] = child
+                    required_strat[node.info_set] = action
     
     return required_strat
 

@@ -15,6 +15,8 @@ def test_helpers_fn():
 def test_strategy():
     root = build_tree()
     behavioural = enumerate_behavioural_strat(root, "Batter")
+    with open(file = "C:\\Users\\elidk\\PycharmProjects\\NashEquilibirum\\behavioural\\behav_strat.txt", mode = "w") as f: 
+        print(behavioural, file = f)
 
 def test_si():
     root = build_tree()

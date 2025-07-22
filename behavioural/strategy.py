@@ -24,8 +24,18 @@ def load_mixed_strat():
     
     return pitcher_strat, batter_strat
 
+def load_test_strat():
+    pitcher_strat = [0]*(2**9)
+    batter_strat = [0]*(2**9)
+    for i in range(len(pitcher_strat)):
+        pitcher_strat[i] = 1/(2**9)
+    for i in range(len(batter_strat)//2):
+        pitcher_strat[i] = 2/(2**9)
+
+    return pitcher_strat, batter_strat
+
 def sum_of_strat(root, target, player_id):
-    pitcher_strat, batter_strat = load_mixed_strat()
+    pitcher_strat, batter_strat = load_test_strat()
     list_strats = list_strategies(target, player_id, root)
     if player_id == "Pitcher":
         mixed_strat = pitcher_strat
@@ -36,7 +46,6 @@ def sum_of_strat(root, target, player_id):
     prob = 0
 
     for strat in list_strats: 
-        print(strat)
         idx = strat_to_idx(strat, len(action_set), action_set)
         prob += mixed_strat[idx]
     return prob
@@ -47,9 +56,14 @@ def behavioural_strat(rep: Node, root, player_id):
         strat[i] = None
     
     denominator = sum_of_strat(root, rep, player_id)
-    for action, node in rep.children.items():
-        numerator = sum_of_strat(root, node, player_id)
-        strat[action] = numerator/denominator
+
+    if denominator == 0: 
+        for action, node in rep.children.items():
+            strat[action] = 1/len(rep.children)     #uniform distribution
+    else: 
+        for action, node in rep.children.items():
+            numerator = sum_of_strat(root, node, player_id)
+            strat[action] = numerator/denominator
     
     return strat
 
@@ -59,9 +73,16 @@ def sanity_check(strat):
         sum += i
     assert sum == 1 
 
-def enumerate_behavioural_strat(root, player_id):
+def enumerate_behavioural_strat(root, player_id) -> dict:
     behavioural: dict[Hashable, dict] = {}
     all_info_sets = player_info_sets(root, player_id)
     for info_set, rep in all_info_sets.items(): 
         strat = behavioural_strat(rep, root, player_id)
         behavioural[info_set] = strat
+    return behavioural
+
+
+def check_equivalence(behav_strat:dict[Hashable, dict], mixed_strat:list[int])-> bool: 
+    return
+
+# need to check that the behavioural strategy 

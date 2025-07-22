@@ -49,8 +49,8 @@ def build_tree() -> Node:
 
     pitcher_node = [c7, c8, c10, c11, c13, c14, c16, c17]
     for i, node in enumerate(pitcher_node): 
-        bi = Node(data = "Batter", info_set = 1 + i)
-        bj = Node(data = "Batter", info_set = 1 + i)
+        bi = Node(data = "Batter", info_set = 2 + i)
+        bj = Node(data = "Batter", info_set = 2 + i)
         node.add_child(ps[0],bi)
         node.add_child(ps[1], child = bj)
 
