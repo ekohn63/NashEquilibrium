@@ -6,3 +6,5 @@ def idx_to_strat(idx:int, base:int, length: int, strategy: Sequence) -> Tuple:
         (idx, position) = divmod(idx, base)
         out[pos] = strategy[position]
     return tuple(out)
+
+def strat_to_idx()

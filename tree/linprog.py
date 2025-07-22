@@ -1,4 +1,5 @@
 import math
+import pickle
 from scipy.optimize import linprog
 import numpy as np
 # let row player be the pitcher, colplayer be the batter
@@ -25,6 +26,11 @@ def row_max_min(U):
 
     p = res_row.x[:n]
     v = -res_row.fun                            # remember: we minimized -v
+
+    file_path = "C:\\Users\\elidk\\PycharmProjects\\NashEquilibirum\\data\\pitcher_optimal.pkl"
+    with open(file_path, mode = 'w') as file:
+        pickle.dump(p, file)
+
     return (p, v)
 
 
