@@ -90,7 +90,7 @@ def build_tree(node: Node):
 
     if node.data == "Pitcher" or node.data == "Batter":
         for act in actions:
-            node.add_child(act, Node(data = next_player(node.data),count = count))
+            node.add_child(act, Node(data = next_player(node.data), count = count, info_set = node.info_set))
 
     elif node.data == "Nature":
         for act in actions:
@@ -114,7 +114,7 @@ def build_tree(node: Node):
     return node
 
 if __name__ == "__main__":
-    root = Node(data = "Pitcher")
+    root = Node(data = "Pitcher", info_set = 1)
     tree_root = build_tree(root)
     print(f"{RED}{id(root) == id(tree_root)}{END}")
     path = Path(__file__).parent.parent/"data/induced_tree.txt"

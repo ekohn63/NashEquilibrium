@@ -1,18 +1,18 @@
 from enum import Enum, auto
 
-class Location(Enum):
-    Bottom = auto()
-    Middle = auto()
-    Top = auto()
-    Chase = auto()
-
-class Type(Enum):
-    Fastball = auto()
-    Offspeed = auto()
+class PitcherAction(Enum):
+    Fastball_Bottom = 0
+    Fastball_Middle = 1
+    Fastball_Top = 2
+    (Fastball_Chase) = 3
+    (Offspeed_Bottom)= 4
+    (Offspeed_Middle) = 5
+    (Offspeed_Top) = 6
+    (Offspeed_Chase) = 7
 
 class BatterAction(Enum):
-    Swing = auto()
-    Take = auto()
+    Swing = 0
+    Take = 1
 
 class Nature(Enum):
     Single = auto()
@@ -23,6 +23,6 @@ class Nature(Enum):
     Ball = auto()
     Strike = auto()
 
-PITCHER_ACTIONS = [(l, t) for l in Location for t in Type]
+PITCHER_ACTIONS = list(PitcherAction)
 BATTER_ACTIONS = list(BatterAction)
 NATURE_ACTIONS = list(Nature)

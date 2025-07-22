@@ -1,6 +1,6 @@
 from dataclasses import replace
 from typing import Tuple, Dict
-from .action_set import Nature, BatterAction, Location, Type
+from .action_set import Nature, BatterAction, PitcherAction
 from .induced_tree import Node, build_tree
 from .probabilities import converted_dict
 from .dynamics import state_dynamics
@@ -19,33 +19,28 @@ YELLOW = "\033[33m"
 CYAN = "\033[36m"
 
 
-def outcome_prob(pitcher_act: tuple, batter_act: BatterAction) -> Dict[str, float]: 
+def outcome_prob(pitcher_act: PitcherAction, batter_act: BatterAction) -> Dict[str, float]: 
     if batter_act == BatterAction.Swing: 
         b_key = "Swing"
     else: 
         b_key = "Take"
-    if pitcher_act[0] == Location.Bottom:
-        if pitcher_act[1] == Type.Offspeed:
-            p_key = ("Bottom", "Offspeed")
-        else:
-            p_key = ("Bottom", "Fastball")
-    elif pitcher_act[0] == Location.Middle: 
-        if pitcher_act[1] == Type.Offspeed:
-            p_key = ("Middle", "Offspeed")
-        else:
-            p_key = ("Middle", "Fastball")
-    elif pitcher_act[0] == Location.Top: 
-        if pitcher_act[1] == Type.Offspeed:
-            p_key = ("Top", "Offspeed")
-        else:
-            p_key = ("Top", "Fastball")
-    elif pitcher_act[0] == Location.Chase:
-        if pitcher_act[1] == Type.Offspeed:
-            p_key = ("Chase", "Offspeed")
-        else:
-            p_key = ("Chase", "Fastball")
+    if pitcher_act == PitcherAction.Fastball_Bottom:
+        p_key = ("Bottom", "Fastball")
+    elif pitcher_act == PitcherAction.Fastball_Middle:
+        p_key = ("Middle", "Fastball")
+    elif pitcher_act == PitcherAction.Fastball_Top:
+        p_key = ("Top", "Fastball")
+    elif pitcher_act == PitcherAction.Fastball_Chase:
+        p_key = ("Chase", "Fastball")
+    elif pitcher_act == PitcherAction.Offspeed_Bottom:
+        p_key = ("Bottom", "Offspeed")
+    elif pitcher_act == PitcherAction.Offspeed_Middle:
+        p_key = ("Middle", "Offspeed")
+    elif pitcher_act == PitcherAction.Offspeed_Top:
+        p_key = ("Top", "Offspeed")
+    elif pitcher_act == PitcherAction.Offspeed_Chase:
+        p_key = ("Chase", "Offspeed")
     return converted_dict[p_key][b_key]
-
 
 def follow_strat(node:Node, ps:list, bs: list):
     explore_nodes = []

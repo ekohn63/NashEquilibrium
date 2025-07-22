@@ -6,7 +6,7 @@ from itertools import islice
 import csv
 from model.induced_tree import STRIKEOUT, WALK
 
-P_BASE   = 8          # alphabet size
+P_BASE   = len(PITCHER_ACTIONS)          # alphabet size
 P_LEN    = STRIKEOUT + WALK -1         # walk at 3 balls, strikeout at 2 strikes!
 P_TOTAL  = P_BASE ** P_LEN   # 8^12  (68_719_476_736)
 
@@ -39,6 +39,7 @@ def list_all_strats():
     return all_strats
 
 if __name__ == "__main__":
+    print(PITCHER_ACTIONS[0], PITCHER_ACTIONS[1])
     all_strats = list_all_strats()
     print(len(all_strats))
     #print("Total pitcher strategies =", P_TOTAL)
