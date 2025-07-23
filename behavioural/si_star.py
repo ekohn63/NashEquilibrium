@@ -3,7 +3,7 @@ from typing import Hashable
 from model.induced_tree import Node
 from collections import deque
 
-from test_tree import build_tree
+from behavioural.test_tree import build_tree
 # Underlying thm: 
 # the path from the root to any node in the game tree is unique
 def path_to_node(root: Node, target: Node) -> list[Node]: 

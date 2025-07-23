@@ -2,6 +2,8 @@ from sys import path
 import os.path
 import math
 
+from tree.linprog import col_min_max, display, find_saddle_points, row_max_min
+
 path.append(os.path.dirname(path[0]))
 print(os.path.dirname(path[0]))
 print(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
@@ -24,15 +26,20 @@ def fill_matrix():
     print(ev)
     U = build_matrix(root)
     print(U)
-    print(U[0,0])
-    print(ev)
+    print(f"U[0,0]: {U[0,0]}, ev: {ev}")
     assert math.isclose(U[0,0], ev, rel_tol=1e-2)
     return U
 
 if __name__== "__main__":
-    node = Node(data = "Pitcher")
+    node = Node(data = "Pitcher", info_set = 1)
     root = build_tree(node)
-    test()
+    test(root)
     print("check")
-    fill_matrix()
-    print(batter_strat[2])
+    
+    U = fill_matrix()
+    U = U.transpose()
+    #print(U)
+    p,v = row_max_min(U)
+    q,w = col_min_max(U)
+    print(find_saddle_points(U))
+    display(U, p, v, q, w)

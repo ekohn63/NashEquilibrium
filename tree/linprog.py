@@ -2,9 +2,10 @@ import math
 import pickle
 from scipy.optimize import linprog
 import numpy as np
-# let row player be the pitcher, colplayer be the batter
 
-from .test import fill_matrix
+from model.action_set import BATTER_ACTIONS
+from model.helpers import idx_to_strat
+# let row player be the pitcher, colplayer be the batter
 
 # ---------- LP for the batter (row player, maximiser) ----------
 # Variables: p_1..p_m  (probabilities) and v (game value)
@@ -107,6 +108,9 @@ def pure_strat_row_player_second(U):
 
 def display(U, p,v, q, w):
     print("Optimal batter strategy (p):", p)
+    for idx, i in enumerate(p):
+        if i > 0: 
+            print(idx_to_strat(idx, 2, 5, BATTER_ACTIONS))
     print("Optimal pitcher strategy (q): non-zero probabilities at indices where q>0")
     print(np.where(q > 1e-8)[0], "with probs", q[q > 1e-8])
     print("Game value (expected runs for batter):", v)

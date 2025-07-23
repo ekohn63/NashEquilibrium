@@ -1,9 +1,9 @@
 from behavioural.si_star import Si_star, path_to_node, player_info_sets, print_path, size_of_Si
 from behavioural.strategy import check_equivalence, enumerate_behavioural_strat, list_strategies, prob_vertex_behav, sum_of_strat
 from model.helpers import strat_to_idx
-from model.action_set import BATTER_ACTIONS as ba, PITCHER_ACTIONS as pa
+from model.action_set import BATTER_ACTIONS as ba, PITCHER_ACTIONS as pa, Nature
 from model.batter_strategies import batter_strat
-from test_tree import build_tree
+from model.induced_tree import Node, build_tree
 
 
 def test_helpers_fn():
@@ -13,14 +13,16 @@ def test_helpers_fn():
     print(idx)
 
 def test_strategy():
-    root = build_tree()
+    root = Node(data = "Pitcher", info_set = 1)
+    root = build_tree(root)
     behavioural = enumerate_behavioural_strat(root, "Batter")
     with open(file = "C:\\Users\\elidk\\PycharmProjects\\NashEquilibirum\\behavioural\\behav_strat.txt", mode = "w") as f: 
         print(behavioural, file = f)
 
-    vertex = root.children[pa[0]].children[ba[0]].children["Strike"].children[pa[4]].children[ba[1]].children["Terminal"]
+    vertex = root.children[pa[0]].children[ba[0]].children[Nature.Strike].children[pa[1]].children[ba[1]].children["Terminal"]
     prob = prob_vertex_behav(behavioural, vertex, root, "Batter")
     print(prob)
+
     #indices = []
     #for strat in list_strategies(vertex, "Batter",root): 
     #    print(strat)
@@ -28,12 +30,14 @@ def test_strategy():
     #    print(idx)
     #    indices.append(idx)
     #print(indices)
+
     print(f"mixed_strat_prob = {sum_of_strat(root, vertex, "Batter")}")
 
     print(check_equivalence(behavioural, root, "Batter"))
 
 def test_si():
-    root = build_tree()
+    root = Node("Pitcher", info_set = 1)
+    root = build_tree(root)
     node = root.children["Fastball"].children["Swing"].children["Ball"].children["Fastball"]
 
     path = path_to_node(root, node)

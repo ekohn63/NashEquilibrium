@@ -1,4 +1,6 @@
+from collections import defaultdict
 from dataclasses import dataclass, field
+from itertools import count
 from pathlib import Path
 from typing import Any, Dict, Tuple
 
@@ -6,8 +8,11 @@ from .action_set import PITCHER_ACTIONS, BATTER_ACTIONS, NATURE_ACTIONS, Nature
 import csv
 import sys
 
-STRIKEOUT = 2
-WALK = 3
+STRIKEOUT = 1
+WALK = 2
+
+pitcher_next_at_depth: dict[int, int] = defaultdict(int)
+_next_iset = count(start = 1)
 
 # Note to self - make sure to review self, and what the python module, and PYTHONPATH business is
 class Node:
@@ -45,6 +50,17 @@ class Node:
             for child in self.children.values(): #need the values of the keyvalue else get a str
                 child.print_tree(f)
 
+def next_infoset(node: Node):
+    global pitcher_next_at_depth
+    depth = node.count[0] + node.count[1]
+    iset = None
+    if node.data == "Pitcher":
+        if pitcher_next_at_depth[depth] == 0:
+            pitcher_next_at_depth[depth] = next(_next_iset)
+        iset = pitcher_next_at_depth[depth]
+        pitcher_next_at_depth[depth] = next(_next_iset)
+    return iset
+
 def next_player(cur_player:str):
     if cur_player == "Pitcher":
         return "Batter"
@@ -76,6 +92,8 @@ def is_terminal_node(node:Node):
         return False
     
 def build_tree(node: Node):
+    if node.parent == None: 
+        next(_next_iset)
     actions = []
     count = node.count
     if node.data == "Pitcher":
@@ -93,21 +111,25 @@ def build_tree(node: Node):
             node.add_child(act, Node(data = next_player(node.data), count = count, info_set = node.info_set))
 
     elif node.data == "Nature":
-        for act in actions:
+        for infoset, act in enumerate(actions):
             if act in {Nature.Single, Nature.Double, Nature.Triple, Nature.HR, Nature.Out}:
-                node.add_child(act, child = Node(data = "Terminal", count = (0,0)))
+                node.add_child(act, child = Node(data = "Terminal", count = (0,0), info_set = node.info_set))
             elif act == Nature.Strike: 
                 if count[1]+1 >= STRIKEOUT:
                     label = "Terminal, Strikeout"
                 else:
                     label = next_player(node.data)
-                node.add_child(Nature.Strike, child = Node(data = label, count = (count[0], count[1]+1))) # this should be terminal if the count is a terminal count
+                new_node = Node(data = label, count = (count[0], count[1]+1), info_set = None)
+                new_node.info_set = next_infoset(new_node)
+                node.add_child(Nature.Strike, child = new_node) # this should be terminal if the count is a terminal count
             else:
                 if count[0]+1 >= WALK:
                     label = "Terminal, Walk"
                 else:
                     label = next_player(node.data)
-                node.add_child(Nature.Ball, child = Node(data = label, count = (count[0]+1, count[1])))
+                new_node = Node(data = label, count = (count[0]+1, count[1]), info_set = None)
+                new_node.info_set = next_infoset(new_node)
+                node.add_child(Nature.Ball, new_node)
     for child in node.children.values():
         build_tree(child)
 
@@ -116,7 +138,7 @@ def build_tree(node: Node):
 if __name__ == "__main__":
     root = Node(data = "Pitcher", info_set = 1)
     tree_root = build_tree(root)
-    print(f"{RED}{id(root) == id(tree_root)}{END}")
+    print(f"\033[91m {id(root) == id(tree_root)} \033[0m")
     path = Path(__file__).parent.parent/"data/induced_tree.txt"
     print(path)
     with open(path, "w") as file:

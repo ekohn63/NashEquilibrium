@@ -24,7 +24,7 @@ def load_mixed_strat():
     with open("C:\\Users\\elidk\\PycharmProjects\\NashEquilibirum\\data\\batter_optimal.pkl", 'rb') as file:
         batter_strat = pickle.load(file)
     
-    print(f"ps: {pitcher_strat}, bs: {batter_strat}")
+    #print(f"ps: {pitcher_strat}, bs: {batter_strat}")
     
     return pitcher_strat, batter_strat
 
@@ -45,7 +45,7 @@ def load_test_strat():
     return pitcher_strat, batter_strat
 
 def sum_of_strat(root, target, player_id):
-    pitcher_strat, batter_strat = load_test_strat()
+    pitcher_strat, batter_strat = load_mixed_strat()
     list_strats = list_strategies(target, player_id, root)
     if player_id == "Pitcher":
         mixed_strat = pitcher_strat
@@ -139,7 +139,7 @@ def check_equivalence(b_strat:dict[Hashable, dict], root, player_id)-> bool:
     for node in terminal_vertices:
         b_prob = prob_vertex_behav(b_strat, node, root, player_id)
         mixed_strat = sum_of_strat(root, node, player_id)
-        print(f"\033[91m prob: \033[0m {b_prob}, \033[91m m_prob: \033[0m {mixed_strat}")
+        #print(f"\033[91m prob: \033[0m {b_prob}, \033[91m m_prob: \033[0m {mixed_strat}")
         if b_prob != mixed_strat: 
             return False
     return True
