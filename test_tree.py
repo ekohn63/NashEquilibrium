@@ -7,7 +7,7 @@ def build_tree() -> Node:
     b1 = Node(data = "Batter", info_set = 1)
     b2 = Node(data = "Batter", info_set = 1)
     root.add_child(ps[0], b1)
-    root.add_child(ps[1], b2)
+    root.add_child(ps[4], b2)
 
     c3 = Node(data = "Nature", info_set = 1)
     c4 = Node(data = "Nature", info_set = 1)
@@ -52,7 +52,7 @@ def build_tree() -> Node:
         bi = Node(data = "Batter", info_set = 2 + i)
         bj = Node(data = "Batter", info_set = 2 + i)
         node.add_child(ps[0],bi)
-        node.add_child(ps[1], child = bj)
+        node.add_child(ps[4], child = bj)
 
     for pitcher in pitcher_node: 
         for i, node in enumerate(pitcher.children.values()): 

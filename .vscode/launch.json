@@ -8,7 +8,7 @@
             "name": "Python Debugger: Current File",
             "type": "debugpy",
             "request": "launch",
-            "module": "behavioural.strategy",
+            "module": "behavioural.test_script",
             "console": "integratedTerminal",
             "cwd": "${workspaceFolder}"
         }
