@@ -13,6 +13,7 @@ WALK = 2
 
 pitcher_next_at_depth: dict[int, int] = defaultdict(int)
 _next_iset = count(start = 1)
+COUNTER = 0
 
 # Note to self - make sure to review self, and what the python module, and PYTHONPATH business is
 class Node:
@@ -51,7 +52,7 @@ class Node:
                 child.print_tree(f)
 
 def next_infoset(node: Node):
-    global pitcher_next_at_depth
+    global pitcher_next_at_depth, COUNTER
     depth = node.count[0] + node.count[1]
     iset = None
     if node.data == "Pitcher":
@@ -59,6 +60,8 @@ def next_infoset(node: Node):
             pitcher_next_at_depth[depth] = next(_next_iset)
         iset = pitcher_next_at_depth[depth]
         pitcher_next_at_depth[depth] = next(_next_iset)
+        COUNTER += 1
+        print(f"counter= {COUNTER}")
     return iset
 
 def next_player(cur_player:str):
@@ -111,7 +114,7 @@ def build_tree(node: Node):
             node.add_child(act, Node(data = next_player(node.data), count = count, info_set = node.info_set))
 
     elif node.data == "Nature":
-        for infoset, act in enumerate(actions):
+        for act in actions:
             if act in {Nature.Single, Nature.Double, Nature.Triple, Nature.HR, Nature.Out}:
                 node.add_child(act, child = Node(data = "Terminal", count = (0,0), info_set = node.info_set))
             elif act == Nature.Strike: 

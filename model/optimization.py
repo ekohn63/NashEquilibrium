@@ -1,5 +1,5 @@
 import numpy as np
-from scipy.optimize import linprog
+from concurrent.futures import ProcessPoolExecutor, as_completed
 
 from .induced_tree import Node
 from .state import START_STATE
@@ -9,19 +9,29 @@ from .batter_strategies import batter_strat, B_TOTAL
 
 pitcher_strats = list_all_strats()
 
+def _ev_prior(args):
+    i, j, root, ps, bs = args
+    ev = expected_value(root, ps, bs)
+    return i, j, ev
+
 def build_matrix(root: Node, max_p: int = None):
     n = P_TOTAL if max_p is None else max_p
-
-    print(n)
     m = B_TOTAL
 
     U = np.zeros((n,m), dtype = np.float32)
-
+    
+    tasks = []
     for i in range(n):
         ps = pitcher_strategy(i)
         for j, bs in enumerate(batter_strat): 
-            #print(ps, bs)
-            U[i,j] = expected_value(root, ps, bs, START_STATE)    
+            tasks.append((i,j,root,ps,bs))
+            #U[i,j] = expected_value(root, ps, bs, START_STATE)   
+            #print(f"\033[94m {U[i,j]} counter: {counter} \033[0m")
+            #counter += 1
+
+    with ProcessPoolExecutor(max_workers = 8) as executor:
+        for i, j, ev in executor.map(_ev_prior, tasks, chunksize = 8):
+            U[i,j] = ev
     return U
 
 
