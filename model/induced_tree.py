@@ -1,4 +1,4 @@
-from collections import defaultdict
+from collections import defaultdict, deque
 from dataclasses import dataclass, field
 from itertools import count
 from pathlib import Path
@@ -117,7 +117,7 @@ def build_tree(node: Node):
         for act in actions:
             if act in {Nature.Single, Nature.Double, Nature.Triple, Nature.HR, Nature.Out}:
                 node.add_child(act, child = Node(data = "Terminal", count = (0,0), info_set = node.info_set))
-            elif act == Nature.Strike: 
+            elif act == Nature.Strike:
                 if count[1]+1 >= STRIKEOUT:
                     label = "Terminal, Strikeout"
                 else:
@@ -138,10 +138,29 @@ def build_tree(node: Node):
 
     return node
 
+
+def num_infosets(root: Node): 
+    my_set = []
+    stack = deque([])
+    stack.append(root)
+    while stack: 
+        node = stack.pop()
+        if node.data == "Pitcher":
+            my_set.append(node)
+        if node.children is not None:
+            for child in node.children.values():
+                stack.append(child)
+    
+    ids = {n.info_set for n in my_set}
+    print(f"pitcher nodes     : {len(my_set)}")
+    print(f"pitcher infosets  : {len(ids)}")
+
 if __name__ == "__main__":
     root = Node(data = "Pitcher", info_set = 1)
     tree_root = build_tree(root)
     print(f"\033[91m {id(root) == id(tree_root)} \033[0m")
+    num_infosets(tree_root)
+
     path = Path(__file__).parent.parent/"data/induced_tree.txt"
     print(path)
     with open(path, "w") as file:

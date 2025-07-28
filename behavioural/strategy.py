@@ -117,7 +117,7 @@ def prob_vertex_behav(b_strat: dict[Hashable,dict], target: Node, root: Node, pl
         prob = prob*p_onpath
     return prob
 
-def enumerate_terminal(root): 
+def terminal_nodes(root): 
     terminal = []
     stack = deque([root])
     while stack:
@@ -135,7 +135,7 @@ def enumerate_terminal(root):
 # suffices to show p(x;bi) = p(x;si)
 # suffices to show p(x;bi) = p(x;si) for only leaf nodes, since probs propegate up!
 def check_equivalence(b_strat:dict[Hashable, dict], root, player_id)-> bool: 
-    terminal_vertices = enumerate_terminal(root)
+    terminal_vertices = terminal_nodes(root)
     for node in terminal_vertices:
         b_prob = prob_vertex_behav(b_strat, node, root, player_id)
         mixed_strat = sum_of_strat(root, node, player_id)

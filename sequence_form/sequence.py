@@ -1,8 +1,12 @@
+from model.state import START_STATE
+import numpy as np
+
 from model.dynamics import state_dynamics
 from model.induced_tree import Node
 from behavioural.si_star import path_to_node
 from model.payoff import terminal_utility
-
+from model.nature import behave_strat
+from behavioural.strategy import terminal_nodes
 """ Pseudocode:
 dfs -> visit each info set of the tree belonging to player_id
 path to infoset
@@ -47,7 +51,6 @@ def set_sequences_playeri(root: Node, player_id):
     return my_set
 
 # bfs might work, might build the tfds
-
 def set_sequences(root: Node, player_id):
     my_set = set()
     infosets_visited = set()
@@ -57,8 +60,8 @@ def set_sequences(root: Node, player_id):
         if node.children is not None:
             for choice, child in node.children.items():
                 if node.data == player_id:
-                    new_sequence = sequence + (node.info_set, choice) 
                     if node.info_set not in infosets_visited:
+                        new_sequence = sequence + ((node.info_set, choice))
                         my_set.add(new_sequence)
                     dfs(child, new_sequence) 
                 else: 
@@ -71,7 +74,6 @@ def construct_node_sequence(path: tuple[Node], player_id):
     for node,nxt in zip(path, path[1:]):
         if node.data == player_id:
             choice = next(choice for choice in node.children if node.children[choice] is nxt)
-            #print(choice)
             entry = (node.info_set, choice)
             sequence.append(entry)
     return tuple(sequence)
@@ -96,11 +98,32 @@ def get_terminal_node_payoff(terminal: Node, start_state):
 
 # r_0(s_0)
 
-def get_terminal_prob(nature_b_strat: dict[int, dict], sequence: tuple):
+def get_terminal_prob(root, sequence: tuple):
     realization_strat = 1
+    nature_b_strat = behave_strat(root)
     for info_set, choice in sequence:
-        realization_strat = realization * nature_b_strat[info_set][choice]
+        realization_strat = realization_strat * nature_b_strat[info_set][choice]
     return realization_strat
 
-def compute_payoff_matrix():
+
+# uses that the sequence to a node for player i is unique 
+def compute_payoff_matrix(root: Node):
+    terminal_nodes = terminal_nodes(root)
+    pitcher_sequences = set_sequences(root, "Pitcher")
+    batter_sequences = set_sequences(root, "Batter")
+    A = make_matrix(len(batter_sequences), len(pitcher_sequences))
+    for terminal in terminal_nodes:
+        nature, batter, pitcher = get_sequence_tuple(terminal)
+        prob = get_terminal_prob(root, nature)
+        payoff = get_terminal_node_payoff(terminal, START_STATE)
+        row = batter_sequences.index(batter)
+        column = pitcher_sequences.index(pitcher)
+        A[row,column] += prob*payoff
+    
+    return A
+
+def make_matrix(rows, columns):
+    A = np.zeros((rows,columns), dtype = np.float64)
+
+def num_sequences(player_id):
     return
