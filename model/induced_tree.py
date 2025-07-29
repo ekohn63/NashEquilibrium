@@ -13,6 +13,7 @@ WALK = 2
 
 pitcher_next_at_depth: dict[int, int] = defaultdict(int)
 _next_iset = count(start = 1)
+batter_counter = count(start = 1)
 COUNTER = 0
 
 # Note to self - make sure to review self, and what the python module, and PYTHONPATH business is
@@ -46,7 +47,12 @@ class Node:
 
     def print_tree(self, f:str):
         print('     .'*self.get_depth() + str(self.get_depth()) + f" info_set: {self.info_set} " + str((self.count)) + "|---", end = '', file = f)
-        print(self.data, file = f)
+        if self.data == "Nature":
+            print(self.data, end = ' ', file = f)
+            batter_choice = next(choice for choice in self.parent.children if self.parent.children[choice] == self)
+            print(f"    batter: \033[91m {batter_choice} \033[0m", file = f)
+        else:
+            print(self.data, file = f)
         if self.children: 
             for child in self.children.values(): #need the values of the keyvalue else get a str
                 child.print_tree(f)
@@ -56,12 +62,16 @@ def next_infoset(node: Node):
     depth = node.count[0] + node.count[1]
     iset = None
     if node.data == "Pitcher":
-        if pitcher_next_at_depth[depth] == 0:
-            pitcher_next_at_depth[depth] = next(_next_iset)
-        iset = pitcher_next_at_depth[depth]
         pitcher_next_at_depth[depth] = next(_next_iset)
+        iset = pitcher_next_at_depth[depth]
         COUNTER += 1
-        print(f"counter= {COUNTER}")
+        print(pitcher_next_at_depth)
+        #print(f"counter= {COUNTER}")
+    return iset
+
+def next_batter_infoset():
+    iset = next(batter_counter)
+    print(iset)
     return iset
 
 def next_player(cur_player:str):
@@ -109,9 +119,14 @@ def build_tree(node: Node):
     if is_terminal_node(node):
         return node
 
-    if node.data == "Pitcher" or node.data == "Batter":
+    if node.data == "Pitcher":
+        iset = next_batter_infoset()
         for act in actions:
-            node.add_child(act, Node(data = next_player(node.data), count = count, info_set = node.info_set))
+            node.add_child(act, Node(data = "Batter", count = count, info_set = iset))
+
+    if node.data == "Batter":
+        for act in actions:
+            node.add_child(act, Node(data = "Nature", count = count, info_set = node.info_set))
 
     elif node.data == "Nature":
         for act in actions:
@@ -155,11 +170,26 @@ def num_infosets(root: Node):
     print(f"pitcher nodes     : {len(my_set)}")
     print(f"pitcher infosets  : {len(ids)}")
 
+def get_num_infosets(root, player_id):
+    my_set = []
+    stack = deque([])
+    stack.append(root)
+    while stack:
+        node = stack.pop()
+        if node.data == player_id:
+            my_set.append(node)
+        if node.children is not None:
+            for child in node.children.values():
+                stack.append(child)
+    infosets = {node.info_set for node in my_set}
+    print("Max seen:", max(node.info_set for node in my_set))
+    return len(infosets)
+
 if __name__ == "__main__":
     root = Node(data = "Pitcher", info_set = 1)
     tree_root = build_tree(root)
     print(f"\033[91m {id(root) == id(tree_root)} \033[0m")
-    num_infosets(tree_root)
+    print(get_num_infosets(tree_root, "Pitcher"))
 
     path = Path(__file__).parent.parent/"data/induced_tree.txt"
     print(path)
