@@ -8,12 +8,12 @@ from .action_set import PITCHER_ACTIONS, BATTER_ACTIONS, NATURE_ACTIONS, Nature
 import csv
 import sys
 
-STRIKEOUT = 1
+STRIKEOUT = 2
 WALK = 2
 
 pitcher_next_at_depth: dict[int, int] = defaultdict(int)
 _next_iset = count(start = 1)
-batter_counter = count(start = 1)
+batter_counter = count(start = 0)
 COUNTER = 0
 
 # Note to self - make sure to review self, and what the python module, and PYTHONPATH business is
@@ -50,8 +50,12 @@ class Node:
         if self.data == "Nature":
             print(self.data, end = ' ', file = f)
             batter_choice = next(choice for choice in self.parent.children if self.parent.children[choice] == self)
-            print(f"    batter: \033[91m {batter_choice} \033[0m", file = f)
-        else:
+            print(f"    batter: {batter_choice}", file = f)
+        elif self.data == "Batter":
+            print(self.data, end = ' ', file = f)
+            pitcher_choice = next(choice for choice in self.parent.children if self.parent.children[choice] == self)
+            print(f"    pitcher: {pitcher_choice}", file = f)
+        else: 
             print(self.data, file = f)
         if self.children: 
             for child in self.children.values(): #need the values of the keyvalue else get a str
@@ -65,11 +69,11 @@ def next_infoset(node: Node):
         pitcher_next_at_depth[depth] = next(_next_iset)
         iset = pitcher_next_at_depth[depth]
         COUNTER += 1
-        print(pitcher_next_at_depth)
+        #print(pitcher_next_at_depth)
         #print(f"counter= {COUNTER}")
     return iset
 
-def next_batter_infoset():
+def next_batter_infoset(node):  
     iset = next(batter_counter)
     print(iset)
     return iset
@@ -120,7 +124,7 @@ def build_tree(node: Node):
         return node
 
     if node.data == "Pitcher":
-        iset = next_batter_infoset()
+        iset = next_batter_infoset(node)
         for act in actions:
             node.add_child(act, Node(data = "Batter", count = count, info_set = iset))
 

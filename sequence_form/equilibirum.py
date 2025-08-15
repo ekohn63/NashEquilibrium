@@ -13,24 +13,22 @@ def pitcher_constraint_matrix(root, sequencelist: list):
     num_infoset = get_num_infosets(root, "Pitcher")
     F = np.zeros(shape = ((1+num_infoset),len(sequencelist)), dtype = np.float64)
     F[0,0] = 1.0
-    for sequence in sequencelist:
-        index = sequencelist.index(sequence)
+    for index, sequence in enumerate(sequencelist):
+        print(sequence, end = "     ")
+        #index = sequencelist.index(sequence)
         if sequence == ((),): 
             continue
         infoset = sequence[-1][0]
         if len(sequence) > 2:
-            parent_sequence = sequence[:-2]
+            parent_sequence = sequence[:-1]
         elif len(sequence) == 2:
-            parent_sequence = (sequence[:-2],)
+            parent_sequence = sequence[:-1]
         else:
             parent_sequence = ((),)
         parent_index = sequencelist.index(parent_sequence)
+        print(f"p_seqence: {parent_sequence}, pindex: \033[91m {parent_index} \033[0m")
         F[infoset, index] = 1.0
         F[infoset, parent_index] = -1.0
-    
-    # constructin glittle f:
-    f = np.zeros(shape = ((1+num_infoset),1), dtype = np.float64)
-    f[0,0] = 1.0
 
     return F
 
@@ -38,6 +36,7 @@ def pitcher_constraint_matrix(root, sequencelist: list):
 def batter_constraint_matrix(root, sequencelist:list): 
     num_infosets = get_num_infosets(root, "Batter")
     print(num_infosets)
+    print(len(sequencelist))
     E = np.zeros((1+num_infosets, len(sequencelist)), dtype = np.float64)
     E[0, 0] = 1
 
@@ -48,20 +47,16 @@ def batter_constraint_matrix(root, sequencelist:list):
             continue
         infoset = sequence[-1][0]
         if len(sequence) > 2:
-            parent_sequence = sequence[:-2]
+            parent_sequence = sequence[:-1]
         elif len(sequence) == 2: 
-            parent_sequence = (sequence[:-2],)
+            parent_sequence = sequence[:-1]
         else:
             parent_sequence = ((),)
-        print(f"p_seq: {parent_sequence}")
+        #print(f"p_seq: {parent_sequence}")
         parent_index = sequencelist.index(parent_sequence)
         E[infoset,index] = 1
         E[infoset,parent_index] = -1
-
-    # little e:
-    e = np.zeros(((1+num_infosets),1), dtype = np.float64)
-    e[0,0] = 1.
-
+        
     return E
 
 
@@ -170,6 +165,7 @@ def pyomo_mps(A,E,F):
     e[0] = 1
     f = np.zeros(q)
     f[0] = 1
+    print(f"F: {F}, f: {f}")
 
     # Pyomo model
     model = ConcreteModel()
@@ -198,10 +194,23 @@ def pyomo_mps(A,E,F):
 
     # Constraint 2: -F y = -f  <==> F y = f
     def eq_constraint(model, i):
-        return sum(F[i, j] * model.y[j] for j in model.M) == f[i]
+        return sum(-F[i, j] * model.y[j] for j in model.M) == -f[i]
     model.eq_constraints = Constraint(model.Q, rule=eq_constraint)
 
 
+    solver = SolverFactory('highs')
+    solver.solve(model, tee=False)
+
+    y_val = [value(model.y[j]) for j in model.M]   # ← guaranteed correct
+    print("y =", y_val)
+    val = (value(model.obj))
+    print(val)
+    assert np.allclose(F @ y_val, f, atol=1e-8)
+
+    return y_val, val
+
+
+    """
     filename = ''.join([str(Path(__file__).parent),"\pyomo_model.lp"])
     model.write(filename)
 
@@ -210,7 +219,23 @@ def pyomo_mps(A,E,F):
     status = h.readModel(filename)
     h.run()
     info = h.getInfo()
+    solution = h.getSolution()
     print('Optimal objective = ', info.objective_function_value)
+    print(f"primal var_values: {solution.col_value}")
+    print(f"dual values: {solution.row_dual}")
+
+    
+    names = h.get()          # list of column names in HiGHS order
+    vals  = h.getSolution().col_value  # corresponding values
+
+    y_val = [0.0]*len(model.M)
+    for idx, name in enumerate(names):
+        if name.startswith("y["):
+            j = int(name[2:-1])        # extract the index
+            y_val[j] = vals[idx]
+
+    print("y =", y_val)
+    """
 
 def pyomo_dual(A,E,F):
     n, m = A.shape
@@ -247,6 +272,18 @@ def pyomo_dual(A,E,F):
         return sum(model.x[i] * E[j,i] for i in model.N) == e[j]
     model.equality = Constraint(model.K, rule = equality_constraint)
 
+    solver = SolverFactory('highs')
+    solver.solve(model, tee=False)
+
+    x_val = [value(model.x[j]) for j in model.N]   # ← guaranteed correct
+    print("x =", x_val)
+    val = (value(model.objective))
+    print(val)
+    assert np.allclose(E @ x_val, f, atol=1e-8)
+
+    return x_val, val
+
+    """
     filename = ''.join([str(Path(__file__).parent),"\pyomo_dual.lp"])
     model.write(filename)
 
@@ -255,9 +292,15 @@ def pyomo_dual(A,E,F):
     status = h.readModel(filename)
     h.run()
     info = h.getInfo()
+    solution = h.getSolution()
+    col_values = solution.col_value
     print('Optimal objective = ', info.objective_function_value)
+    print(f"dual values: {solution.col_value}")
+    print(f"primal values: {solution.row_dual}")
+    return col_values, solution.row_dual
+    """
 
-def pyomo_lp(A, E):
+def pyomo_batter_br(A, E):
     model = ConcreteModel()
 
     n, m = A.shape
@@ -288,3 +331,39 @@ def pyomo_lp(A, E):
     # Optional: export to LP format
     model.write(f"{Path(__file__).parent}\pyomo.lp")
 
+
+def pyomo_pitcher_br(F, B, x): 
+    model = ConcreteModel()
+    
+    n, m = B.shape
+    p = F.shape[0]
+
+    model.M = RangeSet(0, m-1)
+    model.N = RangeSet(0, n-1)
+    model.P = RangeSet(0, p-1) # number of pitcher infosets
+
+    f = np.zeros(p)
+    f[0] = 1
+
+    model.y = Var(model.M, domain=NonNegativeReals)
+
+    # max (x^T B)y
+    def obj_rule(model):
+        for j in model.M:
+            return sum(x[i] * B[i, j] * model.y[j] for i in model.N)
+    model.obj = Objective(rule=obj_rule, sense=maximize)
+
+    def eq_constraint(model, j):
+        return sum(F[j, i] * model.y[i] for i in model.M) == f[j]
+    model.constraints = Constraint(model.P, rule=eq_constraint)
+    
+    solver = SolverFactory('highs')
+    solver.solve(model, tee=False)
+
+    y_val = [value(model.y[j]) for j in model.M]   
+    print("y =", y_val)
+    val = (value(model.obj))
+    print(val)
+    assert np.allclose(F @ y_val, f, atol=1e-8)
+
+    return y_val, val

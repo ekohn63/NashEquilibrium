@@ -1,7 +1,7 @@
 from .action_set import BATTER_ACTIONS, PITCHER_ACTIONS, NONTERMINAL_NATURE
 from .helpers import idx_to_strat, strat_to_idx
 from itertools import product
-from model.induced_tree import STRIKEOUT, WALK
+from model.induced_tree import STRIKEOUT, WALK, batter_counter
 
 B_BASE = len(BATTER_ACTIONS)
 B_LEN = STRIKEOUT + WALK - 1 
@@ -15,12 +15,16 @@ def num_infosets():
             infosets += (len(BATTER_ACTIONS) * len(PITCHER_ACTIONS) * len(NONTERMINAL_NATURE)) ** i 
     return infosets 
 
+NUM_INFOSETS = next(batter_counter) - 1
 B_TOTAL = B_BASE ** num_infosets()
 
 batter_strat = []
 for i in range(B_TOTAL): 
     strat = idx_to_strat(i, B_BASE, num_infosets(), BATTER_ACTIONS)
     batter_strat.append(strat)
+
+def batter_pure_strats():
+    return batter_strat
 
 if __name__ == "__main__": 
     print(B_TOTAL, num_infosets())

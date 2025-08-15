@@ -1,5 +1,7 @@
 from dataclasses import replace
 from typing import Tuple, Dict
+
+from model.nature import get_outcome_prob
 from .action_set import Nature, BatterAction, PitcherAction
 from .induced_tree import Node, build_tree
 from .probabilities import converted_dict
@@ -19,30 +21,6 @@ BLUE = "\033[94m"
 GREEN = "\033[32m"
 YELLOW = "\033[33m"
 CYAN = "\033[36m"
-
-
-def outcome_prob(pitcher_act: PitcherAction, batter_act: BatterAction) -> Dict[str, float]: 
-    if batter_act == BatterAction.Swing: 
-        b_key = "Swing"
-    else: 
-        b_key = "Take"
-    #if pitcher_act == PitcherAction.Fastball_Bottom:
-    #    p_key = ("Bottom", "Fastball")
-    if pitcher_act == PitcherAction.Fastball_Middle:
-        p_key = ("Middle", "Fastball")
-    #elif pitcher_act == PitcherAction.Fastball_Top:
-    #    p_key = ("Top", "Fastball")
-    #elif pitcher_act == PitcherAction.Fastball_Chase:
-    #    p_key = ("Chase", "Fastball")
-    #elif pitcher_act == PitcherAction.Offspeed_Bottom:
-    #    p_key = ("Bottom", "Offspeed")
-    elif pitcher_act == PitcherAction.Offspeed_Middle:
-        p_key = ("Middle", "Offspeed")
-    #elif pitcher_act == PitcherAction.Offspeed_Top:
-    #    p_key = ("Top", "Offspeed")
-    #elif pitcher_act == PitcherAction.Offspeed_Chase:
-    #    p_key = ("Chase", "Offspeed")
-    return converted_dict[p_key][b_key]
 
 def follow_strat(node:Node, ps:list, bs: list):
     explore_nodes = []
@@ -107,7 +85,7 @@ def dfs_worker_child(args):
         local_state = cur_state
         if child.data == "Nature":
             prev_strat = get_prev_strat(child)
-            prob = float(outcome_prob(prev_strat[2], prev_strat[1])[prev_strat[0]])
+            prob = float(get_outcome_prob(prev_strat[2], prev_strat[1])[prev_strat[0]])
             if prev_strat[0] == Nature.Ball:
                 local_state = replace(cur_state, balls = cur_state.balls + 1)
             elif prev_strat[0] == Nature.Strike:
@@ -157,7 +135,7 @@ def dfs(node:Node, ps: dict, bs: dict, start_state: State, cur_state: State, unf
         prev_strat = None
         if node.data == "Nature":
             prev_strat = get_prev_strat(child)
-            prob = float(outcome_prob(prev_strat[2], prev_strat[1])[prev_strat[0]])
+            prob = float(get_outcome_prob(prev_strat[2], prev_strat[1])[prev_strat[0]])
 
         if node.data == "Nature" and prev_strat[0] == Nature.Ball:
             cur_state = replace(cur_state, balls = cur_state.balls + 1)

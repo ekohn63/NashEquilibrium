@@ -8,47 +8,7 @@ from behavioural.si_star import path_to_node
 from model.payoff import terminal_utility
 from model.nature import behave_strat
 from behavioural.strategy import terminal_nodes
-""" Pseudocode:
-dfs -> visit each info set of the tree belonging to player_id
-path to infoset
-construct sequence from the path to node (each (info_set, act) tuple along the path)
-add that sequence to the list of sequences
-"""
-# I think that above algo is better than building the TFDP for pitcher and player and 
-# then traversing that tree. That might be an option to explore as an option and compare
-# time
-def set_sequences_playeri(root: Node, player_id): 
-    my_set = set()
-    infoset_visited = {}
-    counter = 0
-    info_set_c = 0
-    def dfs(node: Node): 
-        nonlocal counter, info_set_c
-        if node.parent == None: 
-            my_set.add(()) #add empyt set for the root for both pitcher and batter!
-        else:
-            if node.parent.data == player_id: 
-                path = path_to_node(root, node)
-                sequence = construct_node_sequence(path, player_id)
-                my_set.add(sequence)
-                counter += 1
-                #infoset_visited[node.parent.info_set] = infoset_visited[node.parent.info_set] -1
-            
-        if node.children is not None:
-            if node.data == player_id: 
-                info_set_c += 1
-                print(f"\033[94m {info_set_c} \033[0m")
-            #if node.data == player_id: 
-            #    if node.info_set not in infoset_visited:
-            #        infoset_visited[node.info_set] = len(node.children)
-            for choice, child in node.children.items():
-                #if node.data == player_id: 
-                #    sequence.append((node.info_set, choice))
-                dfs(child)
-        else:
-            return
-    dfs(root)
-    return my_set
+
 
 # bfs might work, might build the tfds
 def set_sequences(root: Node, player_id):
@@ -62,7 +22,7 @@ def set_sequences(root: Node, player_id):
                 if node.data == player_id:
                     if infosets_visited[node.info_set] <= len(node.children):
                         my_set.append((sequence)+((node.info_set,choice),))
-                        infosets_visited[node.info_set] += 1 + infosets_visited[node.info_set]
+                        infosets_visited[node.info_set] += 1
                     dfs(child, (sequence)+((node.info_set,choice),))
                 else: 
                     dfs(child, sequence)
@@ -77,6 +37,21 @@ def construct_node_sequence(path: tuple[Node], player_id):
             entry = (node.info_set, choice)
             sequence.append(entry)
     return tuple(sequence)
+
+
+#defining a not stupid way of constructing the seuqence defined by a node (the way I have been doing is stupid)
+def sequence_of(node, player_id):
+    my_list = []
+
+    while (node.parent is not None): 
+        parent = node.parent
+        if parent.data == player_id: 
+            choice = next(choice for choice in parent.children if parent.children[choice] == node)
+            my_list.append(((parent.info_set, choice),))
+        node = parent
+
+    my_list.reverse()
+    return tuple(my_list)
 
 def get_sequence_tuple(root: Node, terminal:Node) -> tuple[tuple]: 
     path = path_to_node(root, terminal)
@@ -131,5 +106,48 @@ def make_matrix(rows, columns):
     A = np.zeros((rows,columns), dtype = np.float64)
     return A
 
-def num_sequences(player_id):
-    return
+"""
+---------------------------------------------------------------------------------
+ Pseudocode:
+dfs -> visit each info set of the tree belonging to player_id
+path to infoset
+construct sequence from the path to node (each (info_set, act) tuple along the path)
+add that sequence to the list of sequences
+"""
+"""
+# I think that above algo is better than building the TFDP for pitcher and player and 
+# then traversing that tree. That might be an option to explore as an option and compare
+# time
+def set_sequences_playeri(root: Node, player_id): 
+    my_set = set()
+    infoset_visited = {}
+    counter = 0
+    info_set_c = 0
+    def dfs(node: Node): 
+        nonlocal counter, info_set_c
+        if node.parent == None: 
+            my_set.add(()) #add empyt set for the root for both pitcher and batter!
+        else:
+            if node.parent.data == player_id: 
+                path = path_to_node(root, node)
+                sequence = construct_node_sequence(path, player_id)
+                my_set.add(sequence)
+                counter += 1
+                #infoset_visited[node.parent.info_set] = infoset_visited[node.parent.info_set] -1
+            
+        if node.children is not None:
+            if node.data == player_id: 
+                info_set_c += 1
+                print(f"\033[94m {info_set_c} \033[0m")
+            #if node.data == player_id: 
+            #    if node.info_set not in infoset_visited:
+            #        infoset_visited[node.info_set] = len(node.children)
+            for choice, child in node.children.items():
+                #if node.data == player_id: 
+                #    sequence.append((node.info_set, choice))
+                dfs(child)
+        else:
+            return
+    dfs(root)
+    return my_set
+"""

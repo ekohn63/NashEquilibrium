@@ -1,14 +1,14 @@
 from enum import Enum, auto
 
 class PitcherAction(Enum):
-    #Fastball_Bottom = 0
-    Fastball_Middle = 0
-    #Fastball_Top = 1
-    #Fastball_Chase = 1
-    #Offspeed_Bottom = 4
-    Offspeed_Middle = 1
-    #Offspeed_Top = 6
-    #Offspeed_Chase = 3
+    Fastball_Bottom = 0
+    Fastball_Middle = 1
+    Fastball_Top = 2
+    Fastball_Chase = 3
+    Offspeed_Bottom = 4
+    Offspeed_Middle = 5
+    Offspeed_Top = 6
+    Offspeed_Chase = 7
 
 class BatterAction(Enum):
     Swing = 0

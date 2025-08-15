@@ -1,14 +1,14 @@
 0 info_set: 1 (0, 0)|---Pitcher
-     .1 info_set: 1 (0, 0)|---Batter
-     .     .2 info_set: 1 (0, 0)|---Nature     batter: [91m BatterAction.Swing [0m
+     .1 info_set: 1 (0, 0)|---Batter     pitcher: PitcherAction.Fastball_Bottom
+     .     .2 info_set: 1 (0, 0)|---Nature     batter: BatterAction.Swing
      .     .     .3 info_set: 1 (0, 0)|---Terminal
      .     .     .3 info_set: 1 (0, 0)|---Terminal
      .     .     .3 info_set: 1 (0, 0)|---Terminal
      .     .     .3 info_set: 1 (0, 0)|---Terminal
      .     .     .3 info_set: 1 (0, 0)|---Terminal
      .     .     .3 info_set: 2 (1, 0)|---Pitcher
-     .     .     .     .4 info_set: 2 (1, 0)|---Batter
-     .     .     .     .     .5 info_set: 2 (1, 0)|---Nature     batter: [91m BatterAction.Swing [0m
+     .     .     .     .4 info_set: 2 (1, 0)|---Batter     pitcher: PitcherAction.Fastball_Bottom
+     .     .     .     .     .5 info_set: 2 (1, 0)|---Nature     batter: BatterAction.Swing
      .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
@@ -16,7 +16,7 @@
      .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
      .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
-     .     .     .     .     .5 info_set: 2 (1, 0)|---Nature     batter: [91m BatterAction.Take [0m
+     .     .     .     .     .5 info_set: 2 (1, 0)|---Nature     batter: BatterAction.Take
      .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
@@ -24,8 +24,8 @@
      .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
      .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
-     .     .     .     .4 info_set: 2 (1, 0)|---Batter
-     .     .     .     .     .5 info_set: 2 (1, 0)|---Nature     batter: [91m BatterAction.Swing [0m
+     .     .     .     .4 info_set: 2 (1, 0)|---Batter     pitcher: PitcherAction.Fastball_Top
+     .     .     .     .     .5 info_set: 2 (1, 0)|---Nature     batter: BatterAction.Swing
      .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
@@ -33,7 +33,58 @@
      .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
      .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
-     .     .     .     .     .5 info_set: 2 (1, 0)|---Nature     batter: [91m BatterAction.Take [0m
+     .     .     .     .     .5 info_set: 2 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 2 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Bottom
+     .     .     .     .     .5 info_set: 2 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 2 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 2 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Top
+     .     .     .     .     .5 info_set: 2 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 2 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 2 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Chase
+     .     .     .     .     .5 info_set: 2 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 2 (1, 0)|---Nature     batter: BatterAction.Take
      .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 2 (0, 0)|---Terminal
@@ -42,15 +93,15 @@
      .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
      .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
      .     .     .3 info_set: None (0, 1)|---Terminal, Strikeout
-     .     .2 info_set: 1 (0, 0)|---Nature     batter: [91m BatterAction.Take [0m
+     .     .2 info_set: 1 (0, 0)|---Nature     batter: BatterAction.Take
      .     .     .3 info_set: 1 (0, 0)|---Terminal
      .     .     .3 info_set: 1 (0, 0)|---Terminal
      .     .     .3 info_set: 1 (0, 0)|---Terminal
      .     .     .3 info_set: 1 (0, 0)|---Terminal
      .     .     .3 info_set: 1 (0, 0)|---Terminal
      .     .     .3 info_set: 3 (1, 0)|---Pitcher
-     .     .     .     .4 info_set: 3 (1, 0)|---Batter
-     .     .     .     .     .5 info_set: 3 (1, 0)|---Nature     batter: [91m BatterAction.Swing [0m
+     .     .     .     .4 info_set: 3 (1, 0)|---Batter     pitcher: PitcherAction.Fastball_Bottom
+     .     .     .     .     .5 info_set: 3 (1, 0)|---Nature     batter: BatterAction.Swing
      .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
@@ -58,7 +109,7 @@
      .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
      .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
-     .     .     .     .     .5 info_set: 3 (1, 0)|---Nature     batter: [91m BatterAction.Take [0m
+     .     .     .     .     .5 info_set: 3 (1, 0)|---Nature     batter: BatterAction.Take
      .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
@@ -66,8 +117,8 @@
      .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
      .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
-     .     .     .     .4 info_set: 3 (1, 0)|---Batter
-     .     .     .     .     .5 info_set: 3 (1, 0)|---Nature     batter: [91m BatterAction.Swing [0m
+     .     .     .     .4 info_set: 3 (1, 0)|---Batter     pitcher: PitcherAction.Fastball_Top
+     .     .     .     .     .5 info_set: 3 (1, 0)|---Nature     batter: BatterAction.Swing
      .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
@@ -75,7 +126,58 @@
      .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
      .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
-     .     .     .     .     .5 info_set: 3 (1, 0)|---Nature     batter: [91m BatterAction.Take [0m
+     .     .     .     .     .5 info_set: 3 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 3 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Bottom
+     .     .     .     .     .5 info_set: 3 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 3 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 3 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Top
+     .     .     .     .     .5 info_set: 3 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 3 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 3 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Chase
+     .     .     .     .     .5 info_set: 3 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 3 (1, 0)|---Nature     batter: BatterAction.Take
      .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 3 (0, 0)|---Terminal
@@ -84,16 +186,16 @@
      .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
      .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
      .     .     .3 info_set: None (0, 1)|---Terminal, Strikeout
-     .1 info_set: 1 (0, 0)|---Batter
-     .     .2 info_set: 1 (0, 0)|---Nature     batter: [91m BatterAction.Swing [0m
+     .1 info_set: 1 (0, 0)|---Batter     pitcher: PitcherAction.Fastball_Top
+     .     .2 info_set: 1 (0, 0)|---Nature     batter: BatterAction.Swing
      .     .     .3 info_set: 1 (0, 0)|---Terminal
      .     .     .3 info_set: 1 (0, 0)|---Terminal
      .     .     .3 info_set: 1 (0, 0)|---Terminal
      .     .     .3 info_set: 1 (0, 0)|---Terminal
      .     .     .3 info_set: 1 (0, 0)|---Terminal
      .     .     .3 info_set: 4 (1, 0)|---Pitcher
-     .     .     .     .4 info_set: 4 (1, 0)|---Batter
-     .     .     .     .     .5 info_set: 4 (1, 0)|---Nature     batter: [91m BatterAction.Swing [0m
+     .     .     .     .4 info_set: 4 (1, 0)|---Batter     pitcher: PitcherAction.Fastball_Bottom
+     .     .     .     .     .5 info_set: 4 (1, 0)|---Nature     batter: BatterAction.Swing
      .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
@@ -101,7 +203,7 @@
      .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
      .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
-     .     .     .     .     .5 info_set: 4 (1, 0)|---Nature     batter: [91m BatterAction.Take [0m
+     .     .     .     .     .5 info_set: 4 (1, 0)|---Nature     batter: BatterAction.Take
      .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
@@ -109,8 +211,8 @@
      .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
      .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
-     .     .     .     .4 info_set: 4 (1, 0)|---Batter
-     .     .     .     .     .5 info_set: 4 (1, 0)|---Nature     batter: [91m BatterAction.Swing [0m
+     .     .     .     .4 info_set: 4 (1, 0)|---Batter     pitcher: PitcherAction.Fastball_Top
+     .     .     .     .     .5 info_set: 4 (1, 0)|---Nature     batter: BatterAction.Swing
      .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
@@ -118,7 +220,58 @@
      .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
      .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
-     .     .     .     .     .5 info_set: 4 (1, 0)|---Nature     batter: [91m BatterAction.Take [0m
+     .     .     .     .     .5 info_set: 4 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 4 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Bottom
+     .     .     .     .     .5 info_set: 4 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 4 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 4 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Top
+     .     .     .     .     .5 info_set: 4 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 4 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 4 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Chase
+     .     .     .     .     .5 info_set: 4 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 4 (1, 0)|---Nature     batter: BatterAction.Take
      .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 4 (0, 0)|---Terminal
@@ -127,15 +280,15 @@
      .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
      .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
      .     .     .3 info_set: None (0, 1)|---Terminal, Strikeout
-     .     .2 info_set: 1 (0, 0)|---Nature     batter: [91m BatterAction.Take [0m
+     .     .2 info_set: 1 (0, 0)|---Nature     batter: BatterAction.Take
      .     .     .3 info_set: 1 (0, 0)|---Terminal
      .     .     .3 info_set: 1 (0, 0)|---Terminal
      .     .     .3 info_set: 1 (0, 0)|---Terminal
      .     .     .3 info_set: 1 (0, 0)|---Terminal
      .     .     .3 info_set: 1 (0, 0)|---Terminal
      .     .     .3 info_set: 5 (1, 0)|---Pitcher
-     .     .     .     .4 info_set: 5 (1, 0)|---Batter
-     .     .     .     .     .5 info_set: 5 (1, 0)|---Nature     batter: [91m BatterAction.Swing [0m
+     .     .     .     .4 info_set: 5 (1, 0)|---Batter     pitcher: PitcherAction.Fastball_Bottom
+     .     .     .     .     .5 info_set: 5 (1, 0)|---Nature     batter: BatterAction.Swing
      .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
@@ -143,7 +296,7 @@
      .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
      .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
-     .     .     .     .     .5 info_set: 5 (1, 0)|---Nature     batter: [91m BatterAction.Take [0m
+     .     .     .     .     .5 info_set: 5 (1, 0)|---Nature     batter: BatterAction.Take
      .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
@@ -151,8 +304,8 @@
      .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
      .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
-     .     .     .     .4 info_set: 5 (1, 0)|---Batter
-     .     .     .     .     .5 info_set: 5 (1, 0)|---Nature     batter: [91m BatterAction.Swing [0m
+     .     .     .     .4 info_set: 5 (1, 0)|---Batter     pitcher: PitcherAction.Fastball_Top
+     .     .     .     .     .5 info_set: 5 (1, 0)|---Nature     batter: BatterAction.Swing
      .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
@@ -160,12 +313,624 @@
      .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
      .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
-     .     .     .     .     .5 info_set: 5 (1, 0)|---Nature     batter: [91m BatterAction.Take [0m
+     .     .     .     .     .5 info_set: 5 (1, 0)|---Nature     batter: BatterAction.Take
      .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 5 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Bottom
+     .     .     .     .     .5 info_set: 5 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 5 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 5 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Top
+     .     .     .     .     .5 info_set: 5 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 5 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 5 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Chase
+     .     .     .     .     .5 info_set: 5 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 5 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 5 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .3 info_set: None (0, 1)|---Terminal, Strikeout
+     .1 info_set: 1 (0, 0)|---Batter     pitcher: PitcherAction.Offspeed_Bottom
+     .     .2 info_set: 1 (0, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 6 (1, 0)|---Pitcher
+     .     .     .     .4 info_set: 6 (1, 0)|---Batter     pitcher: PitcherAction.Fastball_Bottom
+     .     .     .     .     .5 info_set: 6 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 6 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 6 (1, 0)|---Batter     pitcher: PitcherAction.Fastball_Top
+     .     .     .     .     .5 info_set: 6 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 6 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 6 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Bottom
+     .     .     .     .     .5 info_set: 6 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 6 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 6 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Top
+     .     .     .     .     .5 info_set: 6 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 6 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 6 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Chase
+     .     .     .     .     .5 info_set: 6 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 6 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 6 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .3 info_set: None (0, 1)|---Terminal, Strikeout
+     .     .2 info_set: 1 (0, 0)|---Nature     batter: BatterAction.Take
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 7 (1, 0)|---Pitcher
+     .     .     .     .4 info_set: 7 (1, 0)|---Batter     pitcher: PitcherAction.Fastball_Bottom
+     .     .     .     .     .5 info_set: 7 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 7 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 7 (1, 0)|---Batter     pitcher: PitcherAction.Fastball_Top
+     .     .     .     .     .5 info_set: 7 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 7 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 7 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Bottom
+     .     .     .     .     .5 info_set: 7 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 7 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 7 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Top
+     .     .     .     .     .5 info_set: 7 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 7 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 7 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Chase
+     .     .     .     .     .5 info_set: 7 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 7 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 7 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .3 info_set: None (0, 1)|---Terminal, Strikeout
+     .1 info_set: 1 (0, 0)|---Batter     pitcher: PitcherAction.Offspeed_Top
+     .     .2 info_set: 1 (0, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 8 (1, 0)|---Pitcher
+     .     .     .     .4 info_set: 8 (1, 0)|---Batter     pitcher: PitcherAction.Fastball_Bottom
+     .     .     .     .     .5 info_set: 8 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 8 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 8 (1, 0)|---Batter     pitcher: PitcherAction.Fastball_Top
+     .     .     .     .     .5 info_set: 8 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 8 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 8 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Bottom
+     .     .     .     .     .5 info_set: 8 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 8 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 8 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Top
+     .     .     .     .     .5 info_set: 8 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 8 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 8 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Chase
+     .     .     .     .     .5 info_set: 8 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 8 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 8 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .3 info_set: None (0, 1)|---Terminal, Strikeout
+     .     .2 info_set: 1 (0, 0)|---Nature     batter: BatterAction.Take
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 9 (1, 0)|---Pitcher
+     .     .     .     .4 info_set: 9 (1, 0)|---Batter     pitcher: PitcherAction.Fastball_Bottom
+     .     .     .     .     .5 info_set: 9 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 9 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 9 (1, 0)|---Batter     pitcher: PitcherAction.Fastball_Top
+     .     .     .     .     .5 info_set: 9 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 9 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 9 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Bottom
+     .     .     .     .     .5 info_set: 9 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 9 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 9 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Top
+     .     .     .     .     .5 info_set: 9 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 9 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 9 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Chase
+     .     .     .     .     .5 info_set: 9 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 9 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 9 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .3 info_set: None (0, 1)|---Terminal, Strikeout
+     .1 info_set: 1 (0, 0)|---Batter     pitcher: PitcherAction.Offspeed_Chase
+     .     .2 info_set: 1 (0, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 10 (1, 0)|---Pitcher
+     .     .     .     .4 info_set: 10 (1, 0)|---Batter     pitcher: PitcherAction.Fastball_Bottom
+     .     .     .     .     .5 info_set: 10 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 10 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 10 (1, 0)|---Batter     pitcher: PitcherAction.Fastball_Top
+     .     .     .     .     .5 info_set: 10 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 10 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 10 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Bottom
+     .     .     .     .     .5 info_set: 10 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 10 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 10 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Top
+     .     .     .     .     .5 info_set: 10 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 10 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 10 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Chase
+     .     .     .     .     .5 info_set: 10 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 10 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 10 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .3 info_set: None (0, 1)|---Terminal, Strikeout
+     .     .2 info_set: 1 (0, 0)|---Nature     batter: BatterAction.Take
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 1 (0, 0)|---Terminal
+     .     .     .3 info_set: 11 (1, 0)|---Pitcher
+     .     .     .     .4 info_set: 11 (1, 0)|---Batter     pitcher: PitcherAction.Fastball_Bottom
+     .     .     .     .     .5 info_set: 11 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 11 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 11 (1, 0)|---Batter     pitcher: PitcherAction.Fastball_Top
+     .     .     .     .     .5 info_set: 11 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 11 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 11 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Bottom
+     .     .     .     .     .5 info_set: 11 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 11 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 11 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Top
+     .     .     .     .     .5 info_set: 11 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 11 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .4 info_set: 11 (1, 0)|---Batter     pitcher: PitcherAction.Offspeed_Chase
+     .     .     .     .     .5 info_set: 11 (1, 0)|---Nature     batter: BatterAction.Swing
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
+     .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
+     .     .     .     .     .5 info_set: 11 (1, 0)|---Nature     batter: BatterAction.Take
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
+     .     .     .     .     .     .6 info_set: 11 (0, 0)|---Terminal
      .     .     .     .     .     .6 info_set: None (2, 0)|---Terminal, Walk
      .     .     .     .     .     .6 info_set: None (1, 1)|---Terminal, Strikeout
      .     .     .3 info_set: None (0, 1)|---Terminal, Strikeout

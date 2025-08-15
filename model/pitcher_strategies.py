@@ -57,7 +57,7 @@ S B B B
 if P_LEN == 2:
     P_TOTAL  = P_BASE ** num_infosets() 
 if P_LEN == 4: 
-    P_TOTAL = P_BASE ** num_infosets2
+    P_TOTAL = P_BASE ** num_infosets2()
 
 def pitcher_strategy(idx: int):
     if not 0 <= idx < P_TOTAL:
@@ -81,17 +81,22 @@ def dump_to_csv(path:str, limit:int):
             if idx + 1 >= limit:
                 break
 
-def list_all_strats():
+def pitcher_pure_strats():
     all_strats = []
     for i in pitcher_strategies(): 
         all_strats.append(i)
     return all_strats
 
+
+def pure_strategies(root):
+    return
+
+
 if __name__ == "__main__":
     print(f"num_infosets: {num_infosets()}")
     print(pitcher_strategy(5))
     print(PA[0], PA[1])
-    #all_strats = list_all_strats()
+    all_strats = list_all_strats()
     #print(len(all_strats))
     print(num_infosets2())
     #print("Total pitcher strategies =", P_TOTAL)
