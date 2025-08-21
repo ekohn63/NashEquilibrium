@@ -8,15 +8,14 @@ from .action_set import PITCHER_ACTIONS, BATTER_ACTIONS, NATURE_ACTIONS, Nature
 import csv
 import sys
 
-STRIKEOUT = 2
+STRIKEOUT = 1
 WALK = 2
 
 pitcher_next_at_depth: dict[int, int] = defaultdict(int)
 _next_iset = count(start = 1)
-batter_counter = count(start = 0)
+batter_counter = count(start = 1)
 COUNTER = 0
 
-# Note to self - make sure to review self, and what the python module, and PYTHONPATH business is
 class Node:
     data: Any # labeling whic player owns the node!
     count: Tuple

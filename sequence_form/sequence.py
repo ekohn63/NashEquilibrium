@@ -8,7 +8,7 @@ from behavioural.si_star import path_to_node
 from model.payoff import terminal_utility
 from model.nature import behave_strat
 from behavioural.strategy import terminal_nodes
-
+#from sequence_form.test import BEHAVE_STRAT
 
 # bfs might work, might build the tfds
 def set_sequences(root: Node, player_id):
@@ -29,6 +29,31 @@ def set_sequences(root: Node, player_id):
     dfs(root, ())
     return my_set
 
+
+# bfs might work, might build the tfds
+def set_sequences2(root: Node, player_id):
+    my_set = []
+    seen = {((),)}
+    # need to add the seen logic else we will ahve duplicate sequences in our sequence list. 
+    # Deatiled intuition: 
+    def dfs(node: Node, sequence): 
+        if node.parent is None: 
+            my_set.append(((),))
+        if node.children is not None:
+            for choice, child in node.children.items():
+                if node.data == player_id:
+                    new_seq = (sequence) + ((node.info_set, choice),)
+                    if new_seq not in seen:    
+                        my_set.append((sequence)+((node.info_set,choice),))
+                        seen.add(new_seq)
+                    dfs(child, (sequence)+((node.info_set,choice),))
+                else: 
+                    dfs(child, sequence)
+    dfs(root, ())
+    return my_set
+
+# fix this with the
+
 def construct_node_sequence(path: tuple[Node], player_id):
     sequence: list = []
     for node,nxt in zip(path, path[1:]):
@@ -43,11 +68,15 @@ def construct_node_sequence(path: tuple[Node], player_id):
 def sequence_of(node, player_id):
     my_list = []
 
+    if node.parent is None: 
+        my_list.append(())
+
     while (node.parent is not None): 
         parent = node.parent
         if parent.data == player_id: 
             choice = next(choice for choice in parent.children if parent.children[choice] == node)
-            my_list.append(((parent.info_set, choice),))
+            seq = (parent.info_set, choice)
+            my_list.append(seq)
         node = parent
 
     my_list.reverse()
@@ -86,12 +115,16 @@ def get_terminal_prob(root, sequence: tuple, nature_b_strat):
 def compute_payoff_matrix(root: Node):
     leaf_nodes = terminal_nodes(root)
     print(f"\033[91m len: {len(leaf_nodes)} \033[0m")
-    pitcher_sequences = set_sequences(root, "Pitcher")
-    batter_sequences = set_sequences(root, "Batter")
+    pitcher_sequences = set_sequences2(root, "Pitcher")
+    batter_sequences = set_sequences2(root, "Batter")
     A = make_matrix(len(batter_sequences), len(pitcher_sequences))
     nature_b_strat = behave_strat(root)
     for terminal in leaf_nodes:
         nature, batter, pitcher = get_sequence_tuple(root, terminal)
+        #print(f"nature: {nature}, seq_of: {sequence_of(terminal, "Nature")}")
+        assert nature == sequence_of(terminal, "Nature")
+        assert batter == sequence_of(terminal, "Batter")
+        assert pitcher == sequence_of(terminal, "Pitcher")
         prob = get_terminal_prob(root, nature, nature_b_strat)
         payoff = get_terminal_node_payoff(terminal, START_STATE)
         row = batter_sequences.index(batter)
@@ -105,6 +138,27 @@ def compute_payoff_matrix(root: Node):
 def make_matrix(rows, columns):
     A = np.zeros((rows,columns), dtype = np.float64)
     return A
+
+
+def test_perfect_recall(): 
+    parent_seq_by_iset = {}
+
+    def dfs(node, seq):
+        if not getattr(node, "children", None):
+            return
+        for action, child in node.children.items():
+            next_seq = seq
+            if node.data == player_id:
+                I = node.info_set
+                # check parent sequence consistency
+                if I not in parent_seq_by_iset:
+                    parent_seq_by_iset[I] = seq
+                elif parent_seq_by_iset[I] != seq:
+                    print("Imperfect recall at infoset", I,
+                        "parent1:", parent_seq_by_iset[I],
+                        "parent2:", seq)
+                next_seq = seq + ((I, action),)
+            dfs(child, next_seq)
 
 """
 ---------------------------------------------------------------------------------

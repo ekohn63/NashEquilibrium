@@ -1,22 +1,25 @@
+from double_oracle.brs import best_response_pitcher
 from model.induced_tree import build_tree, Node, COUNTER, get_num_infosets
+from model.nature import behave_strat
 from model.pitcher_strategies import pitcher_pure_strats
-from sequence_form.sequence import set_sequences, compute_payoff_matrix
-from sequence_form.equilibirum import batter_constraint_matrix, build_primal_MPS, pitcher_constraint_matrix, pyomo_dual, pyomo_batter_br, pyomo_mps, pyomo_pitcher_br
-from sequence_form.conversion import realization_to_behavioural, behavioural_to_mixed
+from sequence_form.sequence import set_sequences, set_sequences2, compute_payoff_matrix
+from sequence_form.equilibirum import batter_constraint_matrix, build_primal_MPS, pitcher_constraint_matrix, pyomo_dual, pyomo_batter_br, pyomo_primal, pyomo_pitcher_br, pyomo_primal
+from sequence_form.conversion import realization_to_behavioural, behavioural_to_mixed, behavioural_to_realization
 import numpy as np
 
 node = Node(data = "Pitcher", info_set = 1)
 root = build_tree(node)
-#print(f"\033[91m {COUNTER} \033[0m")
-battersequences = set_sequences(root, "Batter")
-pitchersequences = set_sequences(root, "Pitcher")
-print(f"\033[91m pitcher_sequences = \033[0m {pitchersequences}")
-print(f"\033[91m batter_sequences = \033[0m {battersequences}")
-#print(f"\033[91m {len(battersequences)} \033[0m")
-#for i in (battersequences):
-#    print(i)
+BEHAVE_STRAT = behave_strat(root)
 
-#print(get_num_infosets(root, "Batter"))
+battersequences = set_sequences2(root, "Batter")
+pitchersequences = set_sequences2(root, "Pitcher")
+
+print(f"\033[91m pitcher_sequences = \033[0m")
+for idx, sequence in enumerate(pitchersequences):
+    print(f"\033[91m {idx} \033[0m, {sequence}")
+
+for idx, sequence in enumerate(battersequences):
+    print(f"\033[91m {idx} \033[0m, {sequence}")
 
 A = compute_payoff_matrix(root)
 E = batter_constraint_matrix(root, battersequences)
@@ -42,7 +45,7 @@ def test_constraint_matrix():
 def test_mps_file():
     #build_primal_MPS(root, battersequences, pitchersequences, A)
     print(f"E: {E}")
-    primal = pyomo_mps(A,E,F)
+    primal = pyomo_primal(A,E,F)
     #dual2, primal2 = pyomo_dual(A,E,F)
     return primal
     #pitcher_realization = primal[F.shape[0]:]
@@ -68,15 +71,83 @@ def test_conversion(primal):
             strats.append(strat)
     print(f"idx: {np.where(mixed_strat > 1e-8)[0]}, strats: {strats}, len: {len(strats)}")
 
-def test_dfs():
+def test_linprogs():
     B = -A
-    x_val, val = pyomo_dual(A, E, F)
-    y_val, br_val = pyomo_pitcher_br(F, B, x_val) 
+    print(A)
+    print(F)
 
-    print(y_val)
+    y_val, p_val, primal = pyomo_primal(A, E, F)
+    x_val, q_val, dual_val, y_from_dual, p_from_dual = pyomo_dual(A, E, F)
+    
+    bry_val, br_val = pyomo_pitcher_br(F, B, x_val) 
+
+    print(f"q_val: {q_val}")
+    print(f"p_val :{p_from_dual}, p_from_dual: {p_from_dual}")
+
+    print(f" y_val {y_val}, y_from_dual {y_from_dual}")
+
+
+    assert np.isclose(dual_val, x_val @ A @ y_val, 1e-9)
+    assert np.isclose(br_val, -(x_val @ A @ bry_val), 1e-9)
+
+    assert np.allclose(p_val, p_from_dual, atol= 1e-8)
+
+    #assert np.allclose(y_val, y_from_dual, atol= 1e-8) #<-- this cuases an error for some reason!!
+
+    assert np.isclose(primal, dual_val, atol= 1e-8)
+
+    print(f"equilib x: {x_val}, equilib y: {y_val}")
+
+    print(f"val = {dual_val}, br_val = {br_val}")
+
+    print(f"\033[91m lp br_y_val = \033[0m {(bry_val)}")
+
+def test_dp(): 
+    B = -A
+    y_val, p_val, primal = pyomo_primal(A, E, F)
+    x_val, q_val, dual_val, y_from_dual, p_from_dual = pyomo_dual(A, E, F)
+    y_br, q_from_dual, val = pyomo_pitcher_br(F, B, x_val)
+
+    print(f"x_val: {x_val}, y_val: {y_val}")
+    print(f"q_val: {q_val}, q_val_from_dual: {q_from_dual}")
+    print(f"y_br: {y_br}")
+
+
+    br, policy = best_response_pitcher(root, x_val, battersequences, BEHAVE_STRAT)
+    print(f" br: {br}, \033[91m policy: \033[0m {policy}")
+
+    behave = realization_to_behavioural(y_val, pitchersequences, F)
+
+    behave2 = realization_to_behavioural(y_from_dual, pitchersequences, F)
+
+    print(f"behave: {behave}")
+    print(f"behave2: {behave2}")
+
+
+    #assert policy == behave
+    
+    #converted = behavioural_to_realization(policy, pitchersequences)
+    #print(f"converted: {converted}, y_val: {y_val}")
+    #test_same(converted, y_val)
+
+def test_dual(): 
+    x_val, q_val, dual_val, y_from_dual, p_from_dual = pyomo_dual(A, E, F)
+    print(x_val)
+    print(E)
+
+def test_same(converted, y_val):
+    assert len(converted) == len(y_val)
+    for idx in range(len(y_val)):
+        assert converted[idx] == y_val[idx]
+
+def test_pitcher_dp():
+    return
 
 
 #primal = test_mps_file()
 #test_conversion(primal)
 
-test_dfs()
+#test_linprogs()
+
+test_dp()
+#test_dual()

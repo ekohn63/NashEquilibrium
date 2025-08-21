@@ -37,30 +37,5 @@ for pitcher_action, batter_actions in final_dict.items():
 # Show a small sample
 sample = dict(list(converted_dict.items())[:2])
 
-"""
-PROBS = dict(
-    SWING={
-        Nature.Single: 0.08,
-        Nature.Double: 0.025,
-        Nature.Triple: 0.003,
-        Nature.HR   : 0.03,
-        Nature.Out  : 0.25,
-        Nature.Strike: 0.25,
-        Nature.Ball : 0.362
-    },
-    TAKE={
-        Nature.Single: 0.0,
-        Nature.Double: 0.0,
-        Nature.Triple: 0.0,
-        Nature.HR   : 0.0,
-        Nature.Out  : 0.0,
-        Nature.Strike: 0.40,
-        Nature.Ball : 0.60
-    }
-)
-
 if __name__ == "__main__":
-    for (event, prob) in PROBS["SWING"].items():
-        print(event,prob)
-
-"""
+    print(sample)

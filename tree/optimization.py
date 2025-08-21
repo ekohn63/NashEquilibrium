@@ -1,13 +1,13 @@
 import numpy as np
 from concurrent.futures import ProcessPoolExecutor, as_completed
 
-from .induced_tree import Node
-from .state import START_STATE
-from .expected_value import expected_value
-from .pitcher_strategies import list_all_strats, P_TOTAL, pitcher_strategy
-from .batter_strategies import batter_strat, B_TOTAL
+from model.induced_tree import Node
+from model.state import START_STATE
+from model.expected_value import expected_value
+from model.pitcher_strategies import P_TOTAL, pitcher_strategy
+from model.batter_strategies import batter_pure_strats, B_TOTAL
 
-pitcher_strats = list_all_strats()
+batter_strat = batter_pure_strats()
 
 def _ev_prior(args):
     i, j, root, ps, bs = args

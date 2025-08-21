@@ -11,21 +11,22 @@ def get_outcome_prob(pitcher_act: PitcherAction, batter_act: BatterAction) -> di
         b_key = "Take"
     if pitcher_act == PitcherAction.Fastball_Bottom:
         p_key = ("Bottom", "Fastball")
-    if pitcher_act == PitcherAction.Fastball_Middle:
+    elif pitcher_act == PitcherAction.Fastball_Middle:
         p_key = ("Middle", "Fastball")
-    elif pitcher_act == PitcherAction.Fastball_Top:
-        p_key = ("Top", "Fastball")
-    elif pitcher_act == PitcherAction.Fastball_Chase:
-        p_key = ("Chase", "Fastball")
-    elif pitcher_act == PitcherAction.Offspeed_Bottom:
-        p_key = ("Bottom", "Offspeed")
-    elif pitcher_act == PitcherAction.Offspeed_Middle:
-        p_key = ("Middle", "Offspeed")
-    elif pitcher_act == PitcherAction.Offspeed_Top:
-        p_key = ("Top", "Offspeed")
-    elif pitcher_act == PitcherAction.Offspeed_Chase:
-        p_key = ("Chase", "Offspeed")
-    return converted_dict[p_key][b_key]
+    #elif pitcher_act == PitcherAction.Fastball_Top:
+    #    p_key = ("Top", "Fastball")
+    #elif pitcher_act == PitcherAction.Fastball_Chase:
+    #    p_key = ("Chase", "Fastball")
+    #elif pitcher_act == PitcherAction.Offspeed_Bottom:
+    #    p_key = ("Bottom", "Offspeed")
+    #elif pitcher_act == PitcherAction.Offspeed_Middle:
+    #    p_key = ("Middle", "Offspeed")
+    #elif pitcher_act == PitcherAction.Offspeed_Top:
+    #    p_key = ("Top", "Offspeed")
+    #elif pitcher_act == PitcherAction.Offspeed_Chase:
+    #    p_key = ("Chase", "Offspeed")
+
+    return (converted_dict[p_key][b_key])
 
 """PSEUDOCODE:
 DFS throught tree, at each nature info_set, add the 
@@ -60,7 +61,7 @@ def behave_strat(root:Node)-> dict[int, dict]:
 
     return behave_strat
 
-# node: this funcitno would help the expected value function 
+# node: this funciton would help the expected value function 
 # insted of the get_outcome funny business, just call this!
 
 #------------------------------------------------------------------------

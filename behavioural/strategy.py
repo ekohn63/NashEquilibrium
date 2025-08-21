@@ -127,7 +127,6 @@ def terminal_nodes(root):
         else:
             for child in node.children.values():
                 stack.append(child)
-    print(f"\033[94m length_terminal: \033[0m {len(terminal)}")
     return terminal
 # node prob_vertex_mixed is simply sum_of_strat
 

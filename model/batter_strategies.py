@@ -15,15 +15,15 @@ def num_infosets():
             infosets += (len(BATTER_ACTIONS) * len(PITCHER_ACTIONS) * len(NONTERMINAL_NATURE)) ** i 
     return infosets 
 
-NUM_INFOSETS = next(batter_counter) - 1
+#B_NUM_INFOSETS = next(batter_counter) - 1
 B_TOTAL = B_BASE ** num_infosets()
 
-batter_strat = []
-for i in range(B_TOTAL): 
-    strat = idx_to_strat(i, B_BASE, num_infosets(), BATTER_ACTIONS)
-    batter_strat.append(strat)
-
+print(B_BASE, num_infosets())
 def batter_pure_strats():
+    batter_strat = []
+    for i in range(B_TOTAL): 
+        strat = idx_to_strat(i, B_BASE, num_infosets(), BATTER_ACTIONS)
+        batter_strat.append(strat)
     return batter_strat
 
 if __name__ == "__main__": 

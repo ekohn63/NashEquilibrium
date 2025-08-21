@@ -2,11 +2,56 @@ import math
 import pickle
 from scipy.optimize import linprog
 import numpy as np
-
 from model.action_set import BATTER_ACTIONS, PITCHER_ACTIONS
+from model.batter_strategies import num_infosets
 from model.helpers import idx_to_strat
-# let row player be the pitcher, colplayer be the batter
+from pyomo.environ import *
 
+def maximin(U: np.ndarray):
+    nB, nP = U.shape
+    model = ConcreteModel()
+    model.P = RangeSet(0, nP - 1)     
+    model.B = RangeSet(0, nB - 1)    
+    
+    model.U = Param(model.P, model.B, initialize=lambda m,i,j: float(U[i, j]))
+
+    model.alpha = Var(domain=Reals)                    # α free
+    model.x   = Var(model.B, domain=NonNegativeReals)    # π_B ≥ 0
+
+    model.obj = Objective(expr=model.alpha, sense=maximize)
+
+    def maximum_constraint(model, i):
+        return model.alpha - sum(model.U[j, i] * model.x[j] for j in model.B) <= 0
+    
+    model.payoff_ub = Constraint(model.P, rule=maximum_constraint)
+
+    model.simplex = Constraint(expr=sum(model.x[j] for j in model.B) == 1)
+
+    return model
+
+
+def minimax(U: np.ndarray):
+    nB, nP = U.shape
+    model = ConcreteModel()
+    model.P = RangeSet(0, nP - 1)
+    model.B = RangeSet(0, nB - 1)
+    model.U = Param(model.P, model.B, initialize=lambda m,i,j: float(U[i, j]))
+
+    model.beta = Var(domain=Reals)                      # β free
+    model.y  = Var(model.P, domain=NonNegativeReals)      # π_P ≥ 0
+
+    model.obj = Objective(expr=model.beta, sense=minimize)
+
+    def minimum_constraint(m, i):
+        return m.beta - sum(model.U[i, j] * model.y[j] for j in model.P) >= 0
+    model.payoff_lb = Constraint(model.B, rule = minimum_constraint)
+
+    model.simplex = Constraint(expr=sum(model.y[i] for i in model.P) == 1)
+
+    return model
+
+
+#----------- Old Version for completemss using scipy.optimize lin prog solver
 # ---------- LP for the batter (row player, maximiser) ----------
 # Variables: p_1..p_m  (probabilities) and v (game value)
 def row_max_min(U):
@@ -28,7 +73,7 @@ def row_max_min(U):
     p = res_row.x[:n]
     v = -res_row.fun                            # remember: we minimized -v
 
-    file_path = "C:\\Users\\Hank Kohn\\Downloads\\EliWork\\NashEquilibrium\\data\\batter_optimal.pkl"
+    file_path = "C:\\Users\\elidk\\PycharmProjects\\NashEquilibirum\\data\\batter_optimal.pkl"
     with open(file_path, mode = 'wb') as file:
         pickle.dump(p, file)
 
@@ -63,7 +108,7 @@ def col_min_max(U):
     q = col_res.x[:m]
     w = col_res.fun
 
-    file_path = "C:\\Users\\Hank Kohn\\Downloads\\EliWork\\NashEquilibrium\\data\\pitcher_optimal.pkl"
+    file_path = "C:\\Users\\elidk\\PycharmProjects\\NashEquilibirum\\data\\batter_optimal.pkl"
     with open(file = file_path, mode = 'wb') as f:
         pickle.dump(q, f)
 
@@ -106,21 +151,6 @@ def pure_strat_row_player_second(U):
 
     return col_guarantee
 
-def display(U, p,v, q, w):
-    print("Optimal batter strategy (p):", p)
-    for idx, i in enumerate(p):
-        if i > 0: 
-            print(idx_to_strat(idx, 2, 5, BATTER_ACTIONS))
-    print("Optimal pitcher strategy (q): non-zero probabilities at indices where q>0")
-    print(np.where(q > 1e-8)[0], "with probs", q[q > 1e-8])
-    idx = 15
-    print(f"strat: {idx_to_strat(15, 2, 5, PITCHER_ACTIONS)}")
-    print("Game value (expected runs for batter):", v)
-    print("Min Max value:", w)
-    print(U[2, 14])
-    assert math.isclose(v,w, rel_tol = 1e-8)
-
-
 def find_saddle_points(U): 
     v = pure_strat_col_player_second(U)
     w = pure_strat_row_player_second(U)
@@ -131,11 +161,17 @@ def find_saddle_points(U):
 
     return saddle_points
 
-if __name__ == "__main__":
-    U = fill_matrix()
-    U = U.transpose()
-    #print(U)
-    p,v = row_max_min(U)
-    q,w = col_min_max(U)
-    print(find_saddle_points(U))
-    display(U, p, v, q, w)
+def pure_strategies(piB, piP, PINFOSETS): 
+    pitcher_pure_strat = []
+    for idx, val in enumerate(piP):
+        if val > 0: 
+            strat = idx_to_strat(idx, len(PITCHER_ACTIONS), PINFOSETS, PITCHER_ACTIONS)
+            pitcher_pure_strat.append(strat)
+
+    batter_pure_strat = []
+    for idx, val in enumerate(piB):
+        if val > 0: 
+            strat = idx_to_strat(idx, len(BATTER_ACTIONS), num_infosets(), BATTER_ACTIONS)
+            batter_pure_strat.append(strat)
+
+    return pitcher_pure_strat, batter_pure_strat

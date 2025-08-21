@@ -36,23 +36,6 @@ def num_infosets2():
             p_infosets += 4*48
 
     return p_infosets
-"""
-depth 2: (1 + 8) = 9
-S S
-depth 3: 
-S B S
-B S S
-B B B
-depth 4: 
------ finish with strike: 3nCr2
-BBSS
-BSBS
-SBBS
------ finish with ball: 3 nCr 2
-B B S B
-B S B B
-S B B B
-"""
 
 if P_LEN == 2:
     P_TOTAL  = P_BASE ** num_infosets() 
@@ -88,10 +71,6 @@ def pitcher_pure_strats():
     return all_strats
 
 
-def pure_strategies(root):
-    return
-
-
 if __name__ == "__main__":
     print(f"num_infosets: {num_infosets()}")
     print(pitcher_strategy(5))
@@ -115,3 +94,23 @@ if __name__ == "__main__":
     """
     #path = Path(__file__).parent.parent/"data/pitcher_strategies.csv"
     #dump_to_csv(path, 10000000)
+
+
+"""
+depth 2: (1 + 8) = 9
+S S
+depth 3: 
+S B S
+B S S
+B B B
+depth 4: 
+----- finish with strike: 3nCr2
+BBSS
+BSBS
+SBBS
+----- finish with ball: 3 nCr 2
+B B S B
+B S B B
+S B B B
+"""
+

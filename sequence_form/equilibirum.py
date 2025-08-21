@@ -26,7 +26,6 @@ def pitcher_constraint_matrix(root, sequencelist: list):
         else:
             parent_sequence = ((),)
         parent_index = sequencelist.index(parent_sequence)
-        print(f"p_seqence: {parent_sequence}, pindex: \033[91m {parent_index} \033[0m")
         F[infoset, index] = 1.0
         F[infoset, parent_index] = -1.0
 
@@ -41,7 +40,6 @@ def batter_constraint_matrix(root, sequencelist:list):
     E[0, 0] = 1
 
     for sequence in sequencelist: 
-        #print(f"\033[91m {sequence} \033[0m")
         index = sequencelist.index(sequence)
         if sequence == ((),): 
             continue
@@ -153,10 +151,8 @@ def build_primal_MPS(root, batterlist, pitcherlist, A):
     return h
 
 
-def peek_matrix(h):
-    col_ptr, row_ind, val = h.getMatrix()
 
-def pyomo_mps(A,E,F): 
+def pyomo_primal(A,E,F): 
     n, m = A.shape # n = |S_B|, m= |S_P|
     k = E.shape[0] # |1 + U_B|
     q = F.shape[0] # |1 + U_P|
@@ -165,7 +161,6 @@ def pyomo_mps(A,E,F):
     e[0] = 1
     f = np.zeros(q)
     f[0] = 1
-    print(f"F: {F}, f: {f}")
 
     # Pyomo model
     model = ConcreteModel()
@@ -197,17 +192,17 @@ def pyomo_mps(A,E,F):
         return sum(-F[i, j] * model.y[j] for j in model.M) == -f[i]
     model.eq_constraints = Constraint(model.Q, rule=eq_constraint)
 
-
     solver = SolverFactory('highs')
     solver.solve(model, tee=False)
 
     y_val = [value(model.y[j]) for j in model.M]   # ← guaranteed correct
-    print("y =", y_val)
+    p_val = [value(model.p[i]) for i in model.K]
+    #print("y =", y_val)
     val = (value(model.obj))
-    print(val)
+    #print(val)
     assert np.allclose(F @ y_val, f, atol=1e-8)
 
-    return y_val, val
+    return y_val, p_val, val
 
 
     """
@@ -272,16 +267,24 @@ def pyomo_dual(A,E,F):
         return sum(model.x[i] * E[j,i] for i in model.N) == e[j]
     model.equality = Constraint(model.K, rule = equality_constraint)
 
+    model.dual = Suffix(direction=Suffix.IMPORT)
+
     solver = SolverFactory('highs')
     solver.solve(model, tee=False)
 
     x_val = [value(model.x[j]) for j in model.N]   # ← guaranteed correct
-    print("x =", x_val)
-    val = (value(model.objective))
-    print(val)
-    assert np.allclose(E @ x_val, f, atol=1e-8)
+    q_val = [value(model.q[i]) for i in model.T]
 
-    return x_val, val
+    y_from_dual = np.array([model.dual[model.ineq_constraints[j]] for j in model.M], dtype=float)
+    p_from_dual = np.array([model.dual[model.equality[r]]        for r in model.K], dtype=float)
+
+    val = (value(model.objective))
+
+    print(e)
+    assert np.allclose(E @ x_val, e, atol=1e-8)
+    assert np.allclose(x_val @ A @ y_from_dual, val, atol=1e-8)
+
+    return x_val, q_val, val, y_from_dual, p_from_dual
 
     """
     filename = ''.join([str(Path(__file__).parent),"\pyomo_dual.lp"])
@@ -349,21 +352,23 @@ def pyomo_pitcher_br(F, B, x):
 
     # max (x^T B)y
     def obj_rule(model):
-        for j in model.M:
-            return sum(x[i] * B[i, j] * model.y[j] for i in model.N)
+        return sum( sum(x[i] * B[i, j] for i in model.N) * model.y[j] for j in model.M)
     model.obj = Objective(rule=obj_rule, sense=maximize)
 
     def eq_constraint(model, j):
         return sum(F[j, i] * model.y[i] for i in model.M) == f[j]
     model.constraints = Constraint(model.P, rule=eq_constraint)
     
+    model.dual = Suffix(direction=Suffix.IMPORT)
+
     solver = SolverFactory('highs')
     solver.solve(model, tee=False)
 
     y_val = [value(model.y[j]) for j in model.M]   
-    print("y =", y_val)
+    q_from_dual = [value(model.dual[model.constraints[j]]) for j in model.P]
+
     val = (value(model.obj))
-    print(val)
+
     assert np.allclose(F @ y_val, f, atol=1e-8)
 
-    return y_val, val
+    return y_val, q_from_dual, val
