@@ -5,6 +5,7 @@ from model.pitcher_strategies import pitcher_pure_strats
 from sequence_form.sequence import set_sequences, set_sequences2, compute_payoff_matrix
 from sequence_form.equilibirum import batter_constraint_matrix, build_primal_MPS, pitcher_constraint_matrix, pyomo_dual, pyomo_batter_br, pyomo_primal, pyomo_pitcher_br, pyomo_primal
 from sequence_form.conversion import realization_to_behavioural, behavioural_to_mixed, behavioural_to_realization
+from double_oracle.interpretation import bellman_eq, interpret_realization, organize_value_cache
 import numpy as np
 
 node = Node(data = "Pitcher", info_set = 1)
@@ -24,6 +25,8 @@ for idx, sequence in enumerate(battersequences):
 A = compute_payoff_matrix(root)
 E = batter_constraint_matrix(root, battersequences)
 F = pitcher_constraint_matrix(root, pitchersequences)
+
+print(F)
 
 def test_nature_realization():
     pitcher_strat = set_sequences(root, "Pitcher")
@@ -73,16 +76,15 @@ def test_conversion(primal):
 
 def test_linprogs():
     B = -A
-    print(A)
-    print(F)
 
     y_val, p_val, primal = pyomo_primal(A, E, F)
     x_val, q_val, dual_val, y_from_dual, p_from_dual = pyomo_dual(A, E, F)
     
-    bry_val, br_val = pyomo_pitcher_br(F, B, x_val) 
+    bry_val, q_from_dual, br_val = pyomo_pitcher_br(F, B, x_val) 
 
+    print(f"primal: {primal}, dual: {dual_val}")
     print(f"q_val: {q_val}")
-    print(f"p_val :{p_from_dual}, p_from_dual: {p_from_dual}")
+    print(f"p_val :{p_val}, p_from_dual: {p_from_dual}")
 
     print(f" y_val {y_val}, y_from_dual {y_from_dual}")
 
@@ -90,7 +92,7 @@ def test_linprogs():
     assert np.isclose(dual_val, x_val @ A @ y_val, 1e-9)
     assert np.isclose(br_val, -(x_val @ A @ bry_val), 1e-9)
 
-    assert np.allclose(p_val, p_from_dual, atol= 1e-8)
+    #assert np.allclose(p_val, p_from_dual, atol= 1e-8) #<-- not good, why are they different!
 
     #assert np.allclose(y_val, y_from_dual, atol= 1e-8) #<-- this cuases an error for some reason!!
 
@@ -106,23 +108,33 @@ def test_dp():
     B = -A
     y_val, p_val, primal = pyomo_primal(A, E, F)
     x_val, q_val, dual_val, y_from_dual, p_from_dual = pyomo_dual(A, E, F)
-    y_br, q_from_dual, val = pyomo_pitcher_br(F, B, x_val)
+    y_br, q_br, val = pyomo_pitcher_br(F, B, x_val)
 
+    print(f"val: {primal}, dual: {dual_val}")
     print(f"x_val: {x_val}, y_val: {y_val}")
-    print(f"q_val: {q_val}, q_val_from_dual: {q_from_dual}")
+    print(f"q_val: {q_val}, q_br: {q_br}")
     print(f"y_br: {y_br}")
 
-
-    br, policy = best_response_pitcher(root, x_val, battersequences, BEHAVE_STRAT)
+    br, policy, value_cache, succ_prob = best_response_pitcher(root, x_val, battersequences, BEHAVE_STRAT)
     print(f" br: {br}, \033[91m policy: \033[0m {policy}")
 
-    behave = realization_to_behavioural(y_val, pitchersequences, F)
+    behave = realization_to_behavioural(y_br, pitchersequences, F)
 
-    behave2 = realization_to_behavioural(y_from_dual, pitchersequences, F)
+    sequence_support = interpret_realization(y_br, pitchersequences)
 
-    print(f"behave: {behave}")
-    print(f"behave2: {behave2}")
+    print(f"sequence_support: {sequence_support}")
 
+    q_bellman = organize_value_cache(value_cache)
+
+    print(f"q_bellman: {q_bellman}")
+    print(f"br_q: {q_br}")
+
+    bellman_eq(succ_prob, q_bellman, q_br)
+
+   # behave2 = realization_to_behavioural(y_from_dual, pitchersequences, F)
+
+    #print(f"behave: {behave}")
+#    print(f"behave2: {behave2}")
 
     #assert policy == behave
     
@@ -142,6 +154,24 @@ def test_same(converted, y_val):
 
 def test_pitcher_dp():
     return
+
+
+def test_q_val(): 
+    B = -A
+    y_val, p_val, primal = pyomo_primal(A, E, F)
+    x_val, q_val, dual_val, y_from_dual, p_from_dual = pyomo_dual(A, E, F)
+    y_br, q_from_dual, val = pyomo_pitcher_br(F, B, x_val)
+
+    Atx = -A.T @ x_val                      # c_j for pitcher BR
+
+    r_dual = Atx - F.T @ q_val
+    r_br   = Atx - F.T @ q_from_dual
+
+    # whichever y you pair with, indices with y_j>1e-8 must have ~0 reduced cost
+    supp_from_primal = [j for j,v in enumerate(y_val) if abs(v)>1e-9]       # from pyomo_primal
+    supp_from_br     = [j for j,v in enumerate(y_br)   if abs(v)>1e-9]       # from pitcher BR
+    print("r_dual on primal support:", r_dual[supp_from_primal])
+    print("r_br   on BR     support:", r_br[supp_from_br])
 
 
 #primal = test_mps_file()

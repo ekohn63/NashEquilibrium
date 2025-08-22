@@ -48,14 +48,14 @@ def best_response_pitcher(root: Node, x, battersequences, nature_behave):
                 prob = get_stochastic_prob(node, terminal, x, battersequences, nature_behave)
                 #print(f"\033[91m utility: \033[0m {utility} , \033[94m prob: \033[0m {prob}")
                 immediate_reward += utility*prob
-                #print(immediate_reward)
 
             succ_val = 0.0
             successors = get_successorset(root, node, action)
+
             for next_iset in successors:
                 prob = get_stochastic_prob(node, next_iset, x, battersequences, nature_behave)
                 next_val = V(next_iset)
-                print(f"iset: {iset_id}, action: {action}, prob: {prob}, next_val: {next_val}")
+                print(f"iset: {next_iset.info_set}, action: {action}, \033[35m prob: \033[0m {prob}, next_val: {next_val}")
                 succ_prob[next_iset.info_set] = prob
                 succ_val += next_val*prob
             
@@ -68,20 +68,20 @@ def best_response_pitcher(root: Node, x, battersequences, nature_behave):
             elif abs(value - min_val) <= 1e-12:
                 best_actions.append(action)
 
-            print(f"iset = {iset_id}, action = {action}, value = {value}")
+            print(f"iset = {iset_id}, action = {action}, \033[91m succ_value \033[0m = {succ_val}, \033[94m imm_reward: \033[0m {immediate_reward}")
 
-        policy[iset_id] = best_actions[0]
+        policy[iset_id] = best_actions
 
         value_cache[iset_id] = min_val
-        print(f"value_cache[iset_id]: {value_cache[iset_id]}, value_chache: {value_cache}")
+        print(f"value_cache[{iset_id}]: {value_cache[iset_id]}, value_chache: {value_cache}")
 
         return min_val
 
     best_value = V(root)
 
-    print(f"value_cache: {value_cache}, prob: {succ_prob}")
+    print(f"value_cache: {value_cache}, \033[36m prob: \033[0m {succ_prob}")
 
-    return best_value, policy
+    return best_value, policy, value_cache, succ_prob
 
 def get_stochastic_prob(node, next_iset, x, battersequences, nature_behave):
     batter = sequence_of(next_iset, "Batter")

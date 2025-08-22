@@ -21,12 +21,12 @@ def realization_to_behavioural(realization: tuple[float], sequencelist, constrai
                 successors.append(j)
         parent_sequence = sequencelist[parent]
         pinfo_set = None
-        print(f"\033[94m {parent} \033[0m", end = "     ")
+        #print(f"\033[94m {parent} \033[0m", end = "     ")
         if parent_sequence == ((),):
             pinfo_set = 1
         else: 
             pinfo_set = sequencelist[parent][-1][0]
-        print(pinfo_set)
+        #print(pinfo_set)
         for idx in successors:
             child_seq = sequencelist[idx]
             c_infoset = child_seq[-1][0]

@@ -14,6 +14,7 @@ WALK = 2
 pitcher_next_at_depth: dict[int, int] = defaultdict(int)
 _next_iset = count(start = 1)
 batter_counter = count(start = 1)
+_nature_counter = count(start = 1)
 COUNTER = 0
 
 class Node:
@@ -74,7 +75,10 @@ def next_infoset(node: Node):
 
 def next_batter_infoset(node):  
     iset = next(batter_counter)
-    print(iset)
+    return iset
+
+def next_nature_infoset():
+    iset = next(_nature_counter)
     return iset
 
 def next_player(cur_player:str):
@@ -129,12 +133,13 @@ def build_tree(node: Node):
 
     if node.data == "Batter":
         for act in actions:
-            node.add_child(act, Node(data = "Nature", count = count, info_set = node.info_set))
+            iset_id = next_nature_infoset()    
+            node.add_child(act, Node(data = "Nature", count = count, info_set = iset_id))
 
     elif node.data == "Nature":
         for act in actions:
             if act in {Nature.Single, Nature.Double, Nature.Triple, Nature.HR, Nature.Out}:
-                node.add_child(act, child = Node(data = "Terminal", count = (0,0), info_set = node.info_set))
+                node.add_child(act, child = Node(data = "Terminal", count = (0,0)))
             elif act == Nature.Strike:
                 if count[1]+1 >= STRIKEOUT:
                     label = "Terminal, Strikeout"
