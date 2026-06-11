@@ -180,4 +180,8 @@ def test_q_val():
 #test_linprogs()
 
 test_dp()
+
+with open("test_tree.txt", "w") as f: 
+    root.print_tree(f)
+
 #test_dual()
