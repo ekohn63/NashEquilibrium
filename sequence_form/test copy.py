@@ -26,7 +26,7 @@ A = compute_payoff_matrix(root)
 E = batter_constraint_matrix(root, battersequences)
 F = pitcher_constraint_matrix(root, pitchersequences)
 
-#print(F)
+print(F)
 
 def test_nature_realization():
     pitcher_strat = set_sequences(root, "Pitcher")
@@ -205,21 +205,8 @@ def test_tightness():
 
 # test_dp()
 
-#test_tightness()
+test_tightness()
 
-def results():
-    B = -A
-    y_val, p_val, primal = pyomo_primal(A, E, F)
-    x_val, q_val, dual_val, y_from_dual, p_from_dual = pyomo_dual(A, E, F)
-
-    behavioural_p = realization_to_behavioural(y_val, pitchersequences, F)
-    behavoural_b = realization_to_behavioural(x_val, battersequences, E)
-
-    print(f"primal: {primal}, behavioural_p: {behavioural_p}")
-    print(f"dual_val: {dual_val}, behavioural_b: {behavoural_b}")
-
-results()
-print(f"A: {A}")
 with open("test_tree.txt", "w") as f: 
     root.print_tree(f)
 

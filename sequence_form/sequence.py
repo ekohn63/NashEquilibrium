@@ -98,7 +98,7 @@ def get_terminal_node_payoff(terminal: Node, start_state):
     result = next(choice for choice in terminal.parent.children if terminal.parent.children[choice] == terminal)
     new_state, runs = state_dynamics(start_state, result)
     utility = terminal_utility(start_state, new_state, runs)
-    #print(f"utility: {utility}, type: {type(utility)}")
+    print(f"utility: {utility}, result: {result}")
     return utility
 
 # r_0(s_0)
@@ -126,7 +126,9 @@ def compute_payoff_matrix(root: Node):
         assert batter == sequence_of(terminal, "Batter")
         assert pitcher == sequence_of(terminal, "Pitcher")
         prob = get_terminal_prob(root, nature, nature_b_strat)
+        print(f"prob: {prob}")
         payoff = get_terminal_node_payoff(terminal, START_STATE)
+        print(f"payoff: {payoff}")
         row = batter_sequences.index(batter)
         #print(f"batter: {batter}, index: {row}")
         column = pitcher_sequences.index(pitcher)
@@ -138,7 +140,6 @@ def compute_payoff_matrix(root: Node):
 def make_matrix(rows, columns):
     A = np.zeros((rows,columns), dtype = np.float64)
     return A
-
 
 def test_perfect_recall(): 
     parent_seq_by_iset = {}

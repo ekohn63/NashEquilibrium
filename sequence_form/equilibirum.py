@@ -302,7 +302,7 @@ def pyomo_dual(A,E,F):
     print(f"primal values: {solution.row_dual}")
     return col_values, solution.row_dual
     """
-
+"""
 def pyomo_batter_br(A, E):
     model = ConcreteModel()
 
@@ -333,7 +333,80 @@ def pyomo_batter_br(A, E):
 
     # Optional: export to LP format
     model.write(f"{Path(__file__).parent}\pyomo.lp")
+"""
+def pyomo_batter_br(A, E, y, write_lp=False):
+    """
+    Batter best response in sequence form.
 
+    Solves:
+
+        max_x x^T A y
+        s.t.  E x = e
+              x >= 0
+
+    where:
+        A is the batter payoff matrix, shape (# batter sequences, # pitcher sequences)
+        E is the batter flow-constraint matrix, shape (# batter infoset constraints, # batter sequences)
+        y is the pitcher's realization plan, shape (# pitcher sequences,)
+    """
+
+    A = np.asarray(A, dtype=float)
+    E = np.asarray(E, dtype=float)
+    y = np.asarray(y, dtype=float)
+
+    n, m = A.shape          # n batter sequences, m pitcher sequences
+    k, n_E = E.shape        # k batter flow constraints
+
+    assert n_E == n, f"E has {n_E} columns, but A has {n} batter sequences"
+    assert y.shape == (m,), f"y should have shape ({m},), got {y.shape}"
+
+    # Payoff vector c = A y, so objective is c^T x
+    Ay = A @ y
+
+    # Batter sequence-form RHS
+    e = np.zeros(k)
+    e[0] = 1.0
+
+    model = ConcreteModel()
+
+    # x indices: batter sequences
+    model.N = RangeSet(0, n - 1)
+
+    # flow-constraint indices
+    model.K = RangeSet(0, k - 1)
+
+    # Batter realization plan x >= 0
+    model.x = Var(model.N, domain=NonNegativeReals)
+
+    # max_x x^T A y
+    def obj_rule(model):
+        return sum(Ay[i] * model.x[i] for i in model.N)
+
+    model.obj = Objective(rule=obj_rule, sense=maximize)
+
+    # E x = e
+    def eq_constraint(model, j):
+        return sum(E[j, i] * model.x[i] for i in model.N) == e[j]
+
+    model.constraints = Constraint(model.K, rule=eq_constraint)
+
+    # Import duals, useful if you want the dual variables p
+    model.dual = Suffix(direction=Suffix.IMPORT)
+
+    if write_lp:
+        lp_path = Path.cwd() / "pyomo_batter_br.lp"
+        model.write(str(lp_path))
+
+    solver = SolverFactory("highs")
+    results = solver.solve(model, tee=False)
+
+    x_val = np.array([value(model.x[i]) for i in model.N])
+    p_from_dual = np.array([model.dual[model.constraints[j]] for j in model.K])
+    val = value(model.obj)
+
+    assert np.allclose(E @ x_val, e, atol=1e-8), "Batter realization plan violates E x = e"
+
+    return x_val, p_from_dual, val
 
 def pyomo_pitcher_br(F, B, x): 
     model = ConcreteModel()
