@@ -219,6 +219,7 @@ def results():
     print(f"dual_val: {dual_val}, behavioural_b: {behavoural_b}")
 
 results()
+
 print(f"A: {A}")
 with open("test_tree.txt", "w") as f: 
     root.print_tree(f)

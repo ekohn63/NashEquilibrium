@@ -8,7 +8,7 @@ from .action_set import PITCHER_ACTIONS, BATTER_ACTIONS, NATURE_ACTIONS, Nature
 import csv
 import sys
 
-STRIKEOUT = 1
+STRIKEOUT = 2
 WALK = 2
 
 pitcher_next_at_depth: dict[int, int] = defaultdict(int)

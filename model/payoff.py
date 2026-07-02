@@ -18,10 +18,32 @@ df["Average 2 outs"] = df[two_out].mean(axis=1)
 df = df[["Base Runners", "Average 0 outs", "Average 1 outs", "Average 2 outs"]]
 
 def run_expectancy(state: State) -> float: 
-    row_index = (state.on_first) + 2*(state.on_second) + 3*(state.on_third)
-    col_index = (state.outs+1)
-    return df.iloc[row_index, col_index]
+    # Half-inning over
+    if state.outs >= 3:
+        raise ValueError(f"Invalid outs value: {state.outs}. Outs must be less than 3 for run expectancy calculation.")
+        return 0.0
 
+    if state.outs < 0:
+        raise ValueError(f"Invalid outs value: {state.outs}")
+
+    row_index = (
+        int(state.on_first)
+        + 2 * int(state.on_second)
+        + 4 * int(state.on_third)
+    )
+
+    col_index = state.outs + 1
+
+    if row_index < 0 or row_index >= len(df):
+        raise ValueError(f"Invalid base-runner state: {state}")
+
+    if col_index < 1 or col_index >= df.shape[1]:
+        raise ValueError(
+            f"Invalid outs value in state {state}. "
+            f"Computed col_index={col_index}, df.shape={df.shape}"
+        )
+
+    return float(df.iloc[row_index, col_index])
 
 # RV = runs_score + RE(after) - RE(before)
 def terminal_utility(start: State, end: State, runs_scored: int) -> float:

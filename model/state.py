@@ -9,4 +9,4 @@ class State:
     on_second: bool
     on_third: bool
     
-START_STATE = State(0, 0, 0, False, False, False)
+START_STATE = State(0, 0, 0, False, False, True)
