@@ -47,7 +47,7 @@ def state_dynamics(s: State, event:Nature) -> Tuple[State, int]:
     if event == Nature.Ball: 
         if s.balls >=(WALK-1):
             first, second, third, o, runs = advance_runner(s, Outcome.Walk)
-            return replace(s, strikes = 0, balls = 0, on_first = first, on_second = second, on_third = third, outs = 0), runs
+            return replace(s, strikes = 0, balls = 0, on_first = first, on_second = second, on_third = third, outs = o), runs
         else: 
             return replace(s, balls= s.balls + 1), 0
     elif event ==  Nature.Strike: 
@@ -113,7 +113,7 @@ def advance_runner(s: State, event: Outcome) -> Tuple[bool, bool, bool, int, int
             first, second, third = False, True, True
         else:
             runs += second + third
-            first, second, third = False, True, True
+            first, second, third = False, True, False
 
     elif event == Outcome.Triple:
         runs += first + second + third

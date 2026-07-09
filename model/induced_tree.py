@@ -9,7 +9,7 @@ import csv
 import sys
 
 STRIKEOUT = 2
-WALK = 2
+WALK = 3
 
 pitcher_next_at_depth: dict[int, int] = defaultdict(int)
 _next_iset = count(start = 1)

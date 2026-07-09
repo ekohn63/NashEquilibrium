@@ -1,5 +1,6 @@
 from collections import defaultdict
 from model.state import START_STATE
+from dataclasses import replace
 import numpy as np
 
 from model.dynamics import state_dynamics
@@ -94,22 +95,19 @@ def get_sequence_tuple(root: Node, terminal:Node) -> tuple[tuple]:
 
     return nature, batter, pitcher
 
-def get_terminal_node_payoff(terminal: Node, start_state): 
-    result = next(choice for choice in terminal.parent.children if terminal.parent.children[choice] == terminal)
-    new_state, runs = state_dynamics(start_state, result)
-    utility = terminal_utility(start_state, new_state, runs)
-    print(f"utility: {utility}, result: {result}")
-    return utility
-
-# r_0(s_0)
+def get_terminal_node_payoff(terminal: Node, start_state):
+    result = next(choice for choice in terminal.parent.children
+                  if terminal.parent.children[choice] == terminal)
+    balls, strikes = terminal.parent.count      # count when this pitch was thrown
+    pre_state = replace(start_state, balls=balls, strikes=strikes)
+    new_state, runs = state_dynamics(pre_state, result)
+    return terminal_utility(start_state, new_state, runs)
 
 def get_terminal_prob(root, sequence: tuple, nature_b_strat):
     realization_strat = 1
     for info_set, choice in sequence:
         realization_strat = realization_strat * float(nature_b_strat[info_set][choice])
-    #print(f"prob: {realization_strat}, type: {type(realization_strat)}")
     return float(realization_strat)
-
 
 # uses that the sequence to a node for player i is unique 
 def compute_payoff_matrix(root: Node):

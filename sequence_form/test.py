@@ -218,6 +218,9 @@ def results():
     print(f"primal: {primal}, behavioural_p: {behavioural_p}")
     print(f"dual_val: {dual_val}, behavioural_b: {behavoural_b}")
 
+    with open("results/pitcher_behavioural.txt", "w") as f:
+        f.write(str(behavioural_p))
+
 results()
 
 print(f"A: {A}")

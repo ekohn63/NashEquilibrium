@@ -21,7 +21,7 @@ def run_expectancy(state: State) -> float:
     # Half-inning over
     if state.outs >= 3:
         raise ValueError(f"Invalid outs value: {state.outs}. Outs must be less than 3 for run expectancy calculation.")
-        return 0.0
+        #return 0.0
 
     if state.outs < 0:
         raise ValueError(f"Invalid outs value: {state.outs}")

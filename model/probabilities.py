@@ -3,9 +3,6 @@ from pathlib import Path
 import pandas as pd
 
 from .action_set import Nature
-# baseline_probs.py  (values from 2024 MLB league averages)
-#   Source: Baseball-Reference “League Year-by-Year Batting Averages” table  :contentReference[oaicite:0]{index=0}
-
 csv_path = Path(__file__).with_suffix('').parent.parent/"data/pitch_outcome_probabilities.csv"
 
 df = pd.read_csv(csv_path, names= ["Location", "Type", "BatterAction", "Outcome", "Probability"])
