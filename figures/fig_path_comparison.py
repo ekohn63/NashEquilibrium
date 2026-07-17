@@ -23,14 +23,14 @@ OUT_DIR = Path("figures")
 
 RECORDS = [  # (label, pitcher export, batter export, hatch, alpha)
     ("runner on 3rd, 0 out",
-     "results/pitcher_behavioural_(0 outs, runner on third).txt",
-     "results/batter_behavioural_(0 outs, runner on third).txt", None, 1.00),
+     "pitcher_behavioural_(0 outs, runner on third).txt",
+     "batter_behavioural_(0 outs, runner on third).txt", None, 1.00),
     ("bases loaded, 1 out",
-     "results/pitcher_behavioural_(1 out, bases loaded).txt",
-     "results/batter_behavioural_(1 out, bases loaded).txt", "//", 0.75),
+     "pitcher_behavioural_(1 out, bases loaded).txt",
+     "batter_behavioural_(1 out, bases loaded).txt", "//", 0.75),
     ("bases empty, 1 out",
-     "results/pitcher_behavioural_(1 out, bases clear).txt",
-     "results/batter_behavioural_(1 out, bases clear).txt", "..", 0.50),
+     "pitcher_behavioural_(1 out, bases clear).txt",
+     "batter_behavioural_(1 out, bases clear.txt", "..", 0.50),
 ]
 
 # on-path information sets (pitcher, batter) at each count of the fixed path
