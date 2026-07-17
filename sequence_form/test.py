@@ -24,6 +24,9 @@ for idx, sequence in enumerate(battersequences):
 
 A = compute_payoff_matrix(root)
 E = batter_constraint_matrix(root, battersequences)
+
+print("test")
+
 F = pitcher_constraint_matrix(root, pitchersequences)
 
 #print(F)
@@ -212,6 +215,8 @@ def results():
     y_val, p_val, primal = pyomo_primal(A, E, F)
     x_val, q_val, dual_val, y_from_dual, p_from_dual = pyomo_dual(A, E, F)
 
+    print("conversion: ")
+
     behavioural_p = realization_to_behavioural(y_val, pitchersequences, F)
     behavoural_b = realization_to_behavioural(x_val, battersequences, E)
 
@@ -221,10 +226,12 @@ def results():
     with open("results/pitcher_behavioural.txt", "w") as f:
         f.write(str(behavioural_p))
 
+    with open("results/batter_behavioural.txt", "w") as f:
+        f.write(str(behavoural_b))
+
 results()
 
 print(f"A: {A}")
+
 with open("test_tree.txt", "w") as f: 
     root.print_tree(f)
-
-#test_dual()

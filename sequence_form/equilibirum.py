@@ -14,8 +14,7 @@ def pitcher_constraint_matrix(root, sequencelist: list):
     F = np.zeros(shape = ((1+num_infoset),len(sequencelist)), dtype = np.float64)
     F[0,0] = 1.0
     for index, sequence in enumerate(sequencelist):
-        print(sequence, end = "     ")
-        #index = sequencelist.index(sequence)
+        #print(sequence, end = "     ")
         if sequence == ((),): 
             continue
         infoset = sequence[-1][0]
@@ -34,8 +33,8 @@ def pitcher_constraint_matrix(root, sequencelist: list):
 # batter matrix E
 def batter_constraint_matrix(root, sequencelist:list): 
     num_infosets = get_num_infosets(root, "Batter")
-    print(num_infosets)
-    print(len(sequencelist))
+    print(f"\033[91m num_infosets: {num_infosets} \033[0m")
+    print(f"\033[91m len(sequencelist): {len(sequencelist)} \033[0m")
     E = np.zeros((1+num_infosets, len(sequencelist)), dtype = np.float64)
     E[0, 0] = 1
 

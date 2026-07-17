@@ -119,19 +119,15 @@ def compute_payoff_matrix(root: Node):
     nature_b_strat = behave_strat(root)
     for terminal in leaf_nodes:
         nature, batter, pitcher = get_sequence_tuple(root, terminal)
-        #print(f"nature: {nature}, seq_of: {sequence_of(terminal, "Nature")}")
         assert nature == sequence_of(terminal, "Nature")
         assert batter == sequence_of(terminal, "Batter")
         assert pitcher == sequence_of(terminal, "Pitcher")
         prob = get_terminal_prob(root, nature, nature_b_strat)
-        print(f"prob: {prob}")
+        #print(f"prob: {prob}")
         payoff = get_terminal_node_payoff(terminal, START_STATE)
-        print(f"payoff: {payoff}")
+        #print(f"payoff: {payoff}")
         row = batter_sequences.index(batter)
-        #print(f"batter: {batter}, index: {row}")
         column = pitcher_sequences.index(pitcher)
-        #print(f"pitcher: {pitcher}, index: {column}")
-        #print(f"nature: {nature}")
         A[row,column] += prob*payoff
     return A
 
