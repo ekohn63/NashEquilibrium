@@ -92,6 +92,8 @@ def advance_runner(s: State, event: Outcome) -> Tuple[bool, bool, bool, int, int
             else: 
                 if third: 
                     runs += 1
+                    first, second, third = True, False, False
+                else:
                     first, second, third = True, False, True
         else: 
             if second: 
